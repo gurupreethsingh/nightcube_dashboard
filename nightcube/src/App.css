@@ -1,0 +1,76 @@
+.bgContainer {
+    position: relative;
+  }
+  
+  .overlay {
+    position: relative;
+  }
+  
+  .bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    z-index: -1; /* Place the video behind other elements */
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1; /* Place the content on top of the video */
+    color: white; /* Adjust text color for better visibility */
+  }
+
+  .mainsectionend {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value for transparency */
+  }
+  .accordion-item {
+    background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value for transparency */
+  }
+
+  .accordion-button {
+    background-color: transparent; /* Make the button transparent */
+    color: white; /* Set the text color to white */
+    text-align: right; /* Align the text to the right side */
+  }
+
+  .custom-pie-chart-container text {
+    fill: white !important;
+    font-size: 12px;  /* Adjust the font size as needed */
+    /* Add more styles as needed */
+  }
+
+  .transparent-table {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    margin: 100px  auto;
+    width: 98%;
+  }
+  
+  .transparent-table table {
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+  }
+  
+  .transparent-table th,
+  .transparent-table td {
+    border: 1px solid white;
+    padding: 8px;
+    background-color: transparent;
+    color:white;
+  }
+  
+  .transparent-table th {
+    background-color: rgba(0, 0, 0, 0); /* Set background color to transparent using rgba */
+    color: white;
+  }
+  
+  
+  .transparent-table tbody tr:hover {
+    color: white;
+  }

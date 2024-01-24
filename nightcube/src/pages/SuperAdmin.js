@@ -1,6 +1,5 @@
 import React from "react";
-import earth_green from "../website_assets/videos/earth_green.mp4";
-import earth_brown from "../website_assets/videos/earth_brown.mp4";
+import nightcube_dashbord_background from '../website_assets/videos/nightcube_dashbord_background.mp4';
 import { MdExpandCircleDown } from "react-icons/md";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 import { PieChart } from "@mui/x-charts/PieChart";
@@ -10,7 +9,7 @@ const SuperAdmin = () => {
   return (
     <div className="bgContainer">
       <div className="overlay">
-        <video className="bgVideo" src={earth_green} autoPlay loop muted />
+        <video className="bgVideo" src={nightcube_dashbord_background} autoPlay loop muted />
         <div className="content">
           <div className="parent">
             <div>
@@ -102,19 +101,21 @@ const SuperAdmin = () => {
                         className="piechart d-flex justify-content-start align-items-center  custom-pie-chart-container"
                         style={{ width: "100%" }}
                       >
-                        <PieChart
-                          series={[
-                            {
-                              data: [
-                                { id: 0, value: 10, label: "MALE" },
-                                { id: 1, value: 15, label: "FEMALE" },
-                              ],
-                            },
-                          ]}
-                          width={500}
-                          height={250}
-                          margin={{ right: 300 }}
-                        />
+                          <PieChart
+                            series={[
+                              {
+                                data: [
+                                  { id: 0, value: 10,  label: "MALE" ,    color : "#00FC7E" },
+                                  { id: 1, value: 15,  label: "FEMALE"  , color  :"#FFFFFF"},
+                                ],
+                                highlightScope: { faded: 'global', highlighted: 'item' },
+                                faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                              },
+                            ]}
+                            width={500}
+                            height={250}
+                            margin={{ right: 300 }}
+                          />
                       </div>
                     </div>
                   </div>
@@ -136,13 +137,15 @@ const SuperAdmin = () => {
                           series={[
                             {
                               data: [
-                                { id: 0, value: 10, label: "18 to 21" },
-                                { id: 1, value: 15, label: "21 to 25" },
-                                { id: 2, value: 20, label: "26 to 30" },
-                                { id: 3, value: 10, label: "31 to 35" },
-                                { id: 4, value: 15, label: "36 to 40" },
-                                { id: 5, value: 20, label: "40 +    " },
+                                { id: 0, value: 10, label: "16 to 21" , color : "#00FC7E"}, // green
+                                { id: 1, value: 15, label: "21 to 25", color : "#00EBFA" }, // blue
+                                { id: 2, value: 20, label: "26 to 30"  , color : "#FAF700"}, // yellow
+                                { id: 3, value: 10, label: "31 to 35"  , color: "#FFFFFF"}, // white
+                                { id: 4, value: 15, label: "36 to 40" , color: "#FF3600"}, // orange
+                                { id: 5, value: 20, label: "40 +    "  , color  :"#FE0041"}, // red
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
                           width={500}
@@ -170,10 +173,14 @@ const SuperAdmin = () => {
                           series={[
                             {
                               data: [
-                                { id: 0, value: 10, label: "ONCE A WEEK" },
-                                { id: 1, value: 15, label: "ONCE IN 2 WEEKS" },
-                                { id: 2, value: 20, label: "ONCE A MONTH" },
+                                { id: 0, value: 10, label: "ONCE A WEEK" ,      color : "#FE0041"},
+                                { id: 1, value: 15, label: "ONCE IN 2 WEEKS" , color : "#FAF700"},
+                                { id: 2, value: 20, label: "ONCE A MONTH" ,    color : "#00FC7E" },
                               ],
+
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+
                             },
                           ]}
                           width={550}
@@ -201,10 +208,12 @@ const SuperAdmin = () => {
                           series={[
                             {
                               data: [
-                                { id: 0, value: 10, label: "WHATSAPP" },
-                                { id: 1, value: 15, label: "EMAIL" },
-                                { id: 2, value: 20, label: "TEXT MESSAGE" },
+                                { id: 0, value: 10, label: "WHATSAPP" , color : "#00FC7E"}, // green 
+                                { id: 1, value: 15, label: "EMAIL"  , color : "#FAF700"},    // yellow
+                                { id: 2, value: 20, label: "TEXT MESSAGE" , color : "#FE0041" }, // red
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
                           width={500}
@@ -237,34 +246,43 @@ const SuperAdmin = () => {
                                 {
                                   id: 0,
                                   value: 10,
-                                  label: "BOLYWOOD EDM COMMERTIALS",
+                                  label: "LADIES NIGHT",
+                                   color : "#FAF700"
                                 },
                                 {
                                   id: 1,
                                   value: 15,
-                                  label: "TECHNO UNDERGROUND",
+                                  label: "BRUNCH", color : "#00EBFA"
                                 },
                                 {
                                   id: 2,
                                   value: 20,
-                                  label: "HIPHOP - R&B - TRAP",
-                                },
+                                  label: "FRIDAY NIGHT LIVE", color: "#FF3600"}, // orange
                                 {
                                   id: 3,
                                   value: 10,
-                                  label: "DEEP HOUSE MELODIC",
-                                },
+                                  label: "SATURDAY NIGHT LIVE", color: "#FFFFFF"}, // white
                                 {
                                   id: 4,
                                   value: 15,
-                                  label: "LIVE BAND - METAL ACQUOSTIC",
-                                },
+                                  label: "SUNDAY LIGHT LIVE", color  :"#3396B8"}, // dark blue
                                 {
                                   id: 5,
                                   value: 20,
-                                  label: "ALTERNATIVE ELECTRO INDUSTRIALS",
-                                },
+                                  label: "COSTUMES AND THEMES", color : "#00FC7E"}, // green
+                                {
+                                  id: 6,
+                                  value: 20,
+                                  label: "CONCEPT NIGHTS" , color  :"#FE0041"
+                                }, // red
+                                {
+                                  id: 7,
+                                  value: 23,
+                                  label: "HAPPY HOURS" , color  :"#01950F"
+                                }, // red
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
                           width={790}
@@ -274,7 +292,6 @@ const SuperAdmin = () => {
                       </div>
                     </div>
                   </div>
-
                   <div
                     class="col  d-flex flex-column justify-content-start align-items-center"
                     style={{ height: "400px", width: "33%" }}
@@ -295,37 +312,56 @@ const SuperAdmin = () => {
                                 {
                                   id: 0,
                                   value: 10,
-                                  label: "BOLYWOOD EDM COMMERTIALS",
-                                },
+                                  label: "BOLLYWOOD / COMMERCIALS",color : "#00FC7E"}, // green
                                 {
                                   id: 1,
                                   value: 15,
-                                  label: "TECHNO UNDERGROUND",
-                                },
+                                  label: "EDM / COMMERCIALS", color  :"#900C3F"}, // dark blue
                                 {
                                   id: 2,
-                                  value: 20,
-                                  label: "HIPHOP - R&B - TRAP",
-                                },
+                                  value: 25,
+                                  label: "TECHNO / UNDERGROUND", color  :"#3696A6"}, // dark blue
                                 {
                                   id: 3,
-                                  value: 10,
-                                  label: "DEEP HOUSE MELODIC",
-                                },
+                                  value: 20,
+                                  label: "DUBSTEP / BASE",color: "#FF3600"}, // orange
                                 {
                                   id: 4,
-                                  value: 15,
-                                  label: "LIVE BAND - METAL ACQUOSTIC",
-                                },
+                                  value: 10,
+                                  label: "BIG ROOM / ELECTRO", color: "#FFFFFF"}, // white
                                 {
                                   id: 5,
+                                  value: 15,
+                                  label: "DEEP / HOUSE",color : "#FAF700"}, // yellow
+                                {
+                                  id: 6,
                                   value: 20,
-                                  label: "ALTERNATIVE ELECTRO INDUSTRIALS",
-                                },
+                                  label: "CHILL / HOUSE",color  :"#6E7C7A"
+                                }, // red
+
+                                {
+                                  id: 7,
+                                  value: 20,
+                                  label: "HIP-HOP / TRAP",color  :"#013649"
+                                }, 
+                                
+                                {
+                                  id: 8,
+                                  value: 20,
+                                  label: "LIVE BAND / METAL",color  :"#ED0241"
+                                }, 
+                                
+                                {
+                                  id: 9,
+                                  value: 20,
+                                  label: "LIVE BAND / ACOUSTIC",color  :"#AD5041"
+                                }, 
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
-                          width={790}
+                          width={990}
                           height={250}
                           margin={{ right: 300 }}
                         />
@@ -353,34 +389,35 @@ const SuperAdmin = () => {
                                 {
                                   id: 0,
                                   value: 10,
-                                  label: "BOLYWOOD EDM COMMERTIALS",
-                                },
+                                  label: "APPLE iTUNES",color : "#00FC7E"}, // green
                                 {
                                   id: 1,
                                   value: 15,
-                                  label: "TECHNO UNDERGROUND",
-                                },
+                                  label: "SPOTIFY", color  :"#900C3F"}, // dark blue
                                 {
                                   id: 2,
-                                  value: 20,
-                                  label: "HIPHOP - R&B - TRAP",
-                                },
+                                  value: 25,
+                                  label: "JIO SAAVN", color  :"#3696A6"}, // dark blue
                                 {
                                   id: 3,
-                                  value: 10,
-                                  label: "DEEP HOUSE MELODIC",
-                                },
+                                  value: 20,
+                                  label: "GAANA",color: "#FF3600"}, // orange
                                 {
                                   id: 4,
-                                  value: 15,
-                                  label: "LIVE BAND - METAL ACQUOSTIC",
-                                },
+                                  value: 10,
+                                  label: "SOUNDCLOUD", color: "#FFFFFF"}, // white
                                 {
                                   id: 5,
+                                  value: 15,
+                                  label: "GOOGLE YOUTUBE MUSIC",color : "#FAF700"}, // yellow
+                                {
+                                  id: 6,
                                   value: 20,
-                                  label: "ALTERNATIVE ELECTRO INDUSTRIALS",
-                                },
+                                  label: "MIXCLOUD",color  :"#6E7C7A"
+                                }, // red
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
                           width={790}
@@ -404,7 +441,7 @@ const SuperAdmin = () => {
                           aria-expanded="true"
                           aria-controls="panelsStayOpen-collapseThree"
                         >
-                          {" "}EXPAND &nbsp;
+                          {" "}EXPAND DISTRIBUTION &nbsp;
                           <MdExpandCircleDown />
                         </button>
                       </h2>
@@ -428,13 +465,15 @@ const SuperAdmin = () => {
                                     series={[
                                       {
                                         data: [
-                                          { id: 0, value: 10 },
-                                          { id: 1, value: 15 },
-                                          { id: 2, value: 20 },
-                                          { id: 3, value: 10 },
-                                          { id: 4, value: 15 },
-                                          { id: 5, value: 20 },
+                                          { id: 0, value: 10 , color : "#00FC7E"},
+                                          { id: 1, value: 15 ,  color : "#00EBFA"},
+                                          { id: 2, value: 20 , color : "#FAF700"},
+                                          { id: 3, value: 10 , color: "#FFFFFF"},
+                                          { id: 4, value: 15 , color: "#FF3600"},
+                                          { id: 5, value: 20 , color  :"#FE0041"},
                                         ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
                                     width={250}
@@ -448,12 +487,12 @@ const SuperAdmin = () => {
                                       {
                                         id: "barCategories",
                                         data: [
-                                          "18 - 21",
+                                          "16 - 21",
                                           "21 - 25",
                                           "26-30",
                                           "31-35",
                                           "36-40",
-                                          "40+",
+                                          "40+ ",
                                         ],
                                         scaleType: "band",
                                       },
@@ -484,13 +523,19 @@ const SuperAdmin = () => {
                                     series={[
                                       {
                                         data: [
-                                          { id: 0, value: 10 },
-                                          { id: 1, value: 15 },
-                                          { id: 2, value: 20 },
-                                          { id: 3, value: 10 },
-                                          { id: 4, value: 15 },
-                                          { id: 5, value: 20 },
+                                          { id: 0, value: 10 , color : "#00FC7E"},  // blue
+                                          { id: 1, value: 15 , color : "#00EBFA"},  // light green
+                                          { id: 2, value: 20 , color : "#FAF700"},  // red
+                                          { id: 3, value: 10 , color : "#FFFFFF"},  // white
+                                          { id: 4, value: 15 , color : "#FF3600"},  // orange
+                                          { id: 5, value: 20 , color : "#FE0041"},  //yellow
+                                          { id: 6, value: 20 , color : "#900C3F"},  // red
+                                          { id: 7, value: 10 , color : "#FFFFFF"},  // white
+                                          { id: 8, value: 15 , color : "#DAF7A6"},  //orange
+                                          { id: 9, value: 20 , color  :"#AD5041"},  // yellow
                                         ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
                                     width={250}
@@ -796,10 +841,10 @@ const SuperAdmin = () => {
             </div>
           </div>
 
-          <div className="roas_section p-5" id="revenueros">
+          {/* <div className="roas_section p-5" id="revenueros">
             <div class="row">
               <h1 className="text-center p-5">
-                REVENUE ON ADS SPENT(ROAS SYSTEM){" "}
+                REVENUE ON ADS SPENT{" "}
               </h1>
               <div
                 class="col  d-flex flex-column justify-content-start align-items-center "
@@ -902,19 +947,14 @@ const SuperAdmin = () => {
                 </div>
               </div>
 
-              <div className="transparent-table">
-                <table className="table">
+              <div className="transparent-table d-flex justify-content-between">
+                <table className="table me-5">
                   <thead>
                     <tr>
-                      <th scope="col">LINK1</th>
-                      <th scope="col">LINK2</th>
-                      <th scope="col">LINK3</th>
-                      <th scope="col">LINK4</th>
-                      <th scope="col">LINK5</th>
-                      <th scope="col">AG LINK1</th>
-                      <th scope="col">AG LINK2</th>
-                      <th scope="col">AG LINK3</th>
-                      <th scope="col">AG LINK4</th>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">PLATFORM</th>
+                      <th scope="col">LINK</th>
+
                     </tr>
                   </thead>
                   <tbody>
@@ -922,34 +962,253 @@ const SuperAdmin = () => {
                       <th scope="row">1</th>
                       <td>Mark</td>
                       <td>Otto</td>
-                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table className="table ms-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">AGENCY</th>
+                      <th scope="col">LINK</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <th scope="row">1</th>
                       <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>Otto</td>
                       <td>Otto</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
                       <td>Jacob</td>
                       <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>Otto</td>
-                      <td>Otto</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
                       <td>Larry the Bird</td>
                       <td>@twitter</td>
-                      <td>@fat</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>Otto</td>
-                      <td>Otto</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div> */}
+
+<div className="roas_section p-2" id="revenueros">
+            <div class="row">
+              <h2 className="text-center text-decoration-underline p-3">
+                ROAS : LINKS{" "}
+              </h2>
+              <div
+                class="col d-flex flex-column justify-content-center align-items-center"
+                style={{ height: "400px", width: "50%" , margin: "50px" }}
+              >
+                <h4 className="text-center">SOCIAL LINKS</h4>
+                <div
+                  className="maincircle d-flex justify-content-center align-items-center mx-0"
+                  style={{ height: "100%", width: "100%" }}
+                >
+                  <div
+                    className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
+                    style={{ width: "100%" }}
+                  >
+                    <PieChart
+                      series={[
+                        {
+                          data: [
+                            {
+                              id: 0,
+                              value: 10,
+                              label: "FACEBOOK",
+                            },
+                            {
+                              id: 1,
+                              value: 15,
+                              label: "INSTAGRAM",
+                            },
+                            {
+                              id: 2,
+                              value: 20,
+                              label: "GOOGLE",
+                            },
+                            {
+                              id: 3,
+                              value: 10,
+                              label: "YOUTUBE",
+                            },
+                            {
+                              id: 4,
+                              value: 15,
+                              label: "WHATSAPP",
+                            },
+                          ],
+                        },
+                      ]}
+                      width={790}
+                      height={250}
+                      margin={{ right: 300 }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col  d-flex flex-column justify-content-center  align-items-center"
+                style={{ height: "400px", width: "50%", margin: "50px" }}
+              >
+                <h4 className="text-right">AGENCY LINKS</h4>
+                <div
+                  className="maincircle d-flex justify-content-center align-items-center mx-0"
+                  style={{ height: "100%", width: "100%" }}
+                >
+                  <div
+                    className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
+                    style={{ width: "100%" }}
+                  >
+                    <PieChart
+                      series={[
+                        {
+                          data: [
+                            {
+                              id: 0,
+                              value: 10,
+                              label: "AGENCY 1",
+                            },
+                            {
+                              id: 1,
+                              value: 15,
+                              label: "AGENCY 2",
+                            },
+                            {
+                              id: 2,
+                              value: 20,
+                              label: "AGENCY 3",
+                            },
+                            {
+                              id: 3,
+                              value: 10,
+                              label: "AGENCY 4",
+                            },
+                            {
+                              id: 4,
+                              value: 15,
+                              label: "AGENCY 5",
+                            },
+                          ],
+                        },
+                      ]}
+                      width={790}
+                      height={250}
+                      margin={{ right: 300 }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="transparent-table d-flex justify-content-between">
+                <table className="table me-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">PLATFORM</th>
+                      <th scope="col">LINK</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>FACEBOOK</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>INSTAGRAM</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>GOOGLE</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>YOUTUBE</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>WHATSAPP</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table className="table ms-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">AGENCY</th>
+                      <th scope="col">LINK</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>AGENCY 1</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>AGENCY 2</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>AGENCY 3</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>AGENCY 4</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>AGENCY 5</td>
+                      <td></td>
                     </tr>
                   </tbody>
                 </table>
@@ -957,16 +1216,16 @@ const SuperAdmin = () => {
             </div>
           </div>
 
-          <div className="roas_section p-5" id="rosbudget">
+          <div className="roas_section p-2" id="revenueros">
             <div class="row">
-              <h1 className="text-center p-5">
-                REVENUE ON ADS SPENT(ROAS SYSTEM) : BUDGETS{" "}
-              </h1>
+            <h2 className="text-center text-decoration-underline p-3">
+                ROAS : CTR{" "}
+              </h2>
               <div
-                class="col  d-flex flex-column justify-content-start align-items-center "
-                style={{ height: "400px", width: "33%" }}
+                class="col d-flex flex-column justify-content-center align-items-center"
+                style={{ height: "400px", width: "50%" , margin: "50px" }}
               >
-                <h4 className="text-center">SOCIAL LINKS</h4>
+                <h4 className="text-center">SOCIAL CTRS</h4>
                 <div
                   className="maincircle d-flex justify-content-center align-items-center mx-0"
                   style={{ height: "100%", width: "100%" }}
@@ -1016,10 +1275,10 @@ const SuperAdmin = () => {
               </div>
 
               <div
-                class="col  d-flex flex-column justify-content-start align-items-center"
-                style={{ height: "400px", width: "33%" }}
+                class="col  d-flex flex-column justify-content-center  align-items-center"
+                style={{ height: "400px", width: "50%", margin: "50px" }}
               >
-                <h4 className="text-center">AD AGENCY LINKS</h4>
+                <h4 className="text-right">AGENCY CTRS</h4>
                 <div
                   className="maincircle d-flex justify-content-center align-items-center mx-0"
                   style={{ height: "100%", width: "100%" }}
@@ -1052,6 +1311,11 @@ const SuperAdmin = () => {
                               value: 10,
                               label: "AGENCY 4",
                             },
+                            {
+                              id: 4,
+                              value: 30,
+                              label: "AGENCY 5",
+                            },
                           ],
                         },
                       ]}
@@ -1063,19 +1327,14 @@ const SuperAdmin = () => {
                 </div>
               </div>
 
-              <div className="transparent-table">
-                <table className="table">
+              {/* <div className="transparent-table d-flex justify-content-between">
+                <table className="table me-5">
                   <thead>
                     <tr>
-                      <th scope="col">BUDGET1</th>
-                      <th scope="col">BUDGET2</th>
-                      <th scope="col">BUDGET3</th>
-                      <th scope="col">BUDGET4</th>
-                      <th scope="col">BUDGET5</th>
-                      <th scope="col">AG BUDGET1</th>
-                      <th scope="col">AG BUDGET2</th>
-                      <th scope="col">AG BUDGET3</th>
-                      <th scope="col">AG BUDGET4</th>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">PLATFORM</th>
+                      <th scope="col">CTR</th>
+
                     </tr>
                   </thead>
                   <tbody>
@@ -1083,34 +1342,522 @@ const SuperAdmin = () => {
                       <th scope="row">1</th>
                       <td>Mark</td>
                       <td>Otto</td>
-                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table className="table ms-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">AGENCY</th>
+                      <th scope="col">CTR</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <th scope="row">1</th>
                       <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>Otto</td>
                       <td>Otto</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
                       <td>Jacob</td>
                       <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>Otto</td>
-                      <td>Otto</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
                       <td>Larry the Bird</td>
                       <td>@twitter</td>
-                      <td>@fat</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>Otto</td>
-                      <td>Otto</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> */}
+
+<div className="transparent-table d-flex justify-content-between">
+                <table className="table me-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">PLATFORM</th>
+                      <th scope="col">CTR</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>FACEBOOK</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>INSTAGRAM</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>GOOGLE</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>YOUTUBE</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>WHATSAPP</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table className="table ms-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">AGENCY</th>
+                      <th scope="col">CTR</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>AGENCY 1</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>AGENCY 2</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>AGENCY 3</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>AGENCY 4</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>AGENCY 5</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div className="roas_section p-2" id="revenueros">
+            <div class="row">
+            <h2 className="text-center text-decoration-underline p-3">
+                ROAS : BUDGET{" "}
+              </h2>
+              <div
+                class="col d-flex flex-column justify-content-center align-items-center"
+                style={{ height: "400px", width: "50%" , margin: "50px" }}
+              >
+                <h4 className="text-center">SOCIAL BUDGETS</h4>
+                <div
+                  className="maincircle d-flex justify-content-center align-items-center mx-0"
+                  style={{ height: "100%", width: "100%" }}
+                >
+                  <div
+                    className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
+                    style={{ width: "100%" }}
+                  >
+                    <PieChart
+                      series={[
+                        {
+                          data: [
+                            {
+                              id: 0,
+                              value: 10,
+                              label: "FACEBOOK",
+                            },
+                            {
+                              id: 1,
+                              value: 15,
+                              label: "INSTAGRAM",
+                            },
+                            {
+                              id: 2,
+                              value: 20,
+                              label: "GOOGLE",
+                            },
+                            {
+                              id: 3,
+                              value: 10,
+                              label: "YOUTUBE",
+                            },
+                            {
+                              id: 4,
+                              value: 15,
+                              label: "WHATSAPP",
+                            },
+                          ],
+                        },
+                      ]}
+                      width={790}
+                      height={250}
+                      margin={{ right: 300 }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col  d-flex flex-column justify-content-center  align-items-center"
+                style={{ height: "400px", width: "50%", margin: "50px" }}
+              >
+                <h4 className="text-right">AGENCY BUDGETS</h4>
+                <div
+                  className="maincircle d-flex justify-content-center align-items-center mx-0"
+                  style={{ height: "100%", width: "100%" }}
+                >
+                  <div
+                    className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
+                    style={{ width: "100%" }}
+                  >
+                    <PieChart
+                      series={[
+                        {
+                          data: [
+                            {
+                              id: 0,
+                              value: 10,
+                              label: "AGENCY 1",
+                            },
+                            {
+                              id: 1,
+                              value: 15,
+                              label: "AGENCY 2",
+                            },
+                            {
+                              id: 2,
+                              value: 20,
+                              label: "AGENCY 3",
+                            },
+                            {
+                              id: 3,
+                              value: 10,
+                              label: "AGENCY 4",
+                            },
+                            {
+                              id: 4,
+                              value: 30,
+                              label: "AGENCY 5",
+                            },
+                          ],
+                        },
+                      ]}
+                      width={790}
+                      height={250}
+                      margin={{ right: 300 }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+<div className="transparent-table d-flex justify-content-between">
+                <table className="table me-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">PLATFORM</th>
+                      <th scope="col">BUDGET</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>FACEBOOK</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>INSTAGRAM</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>GOOGLE</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>YOUTUBE</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>WHATSAPP</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table className="table ms-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">AGENCY</th>
+                      <th scope="col">BUDGET</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>AGENCY 1</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>AGENCY 2</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>AGENCY 3</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>AGENCY 4</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>AGENCY 5</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div className="roas_section p-2" id="revenueros">
+            <div class="row">
+            <h2 className="text-center text-decoration-underline p-3">
+                ROAS : CONVERSION{" "}
+              </h2>
+              <div
+                class="col d-flex flex-column justify-content-center align-items-center"
+                style={{ height: "400px", width: "50%" , margin: "50px" }}
+              >
+                <h4 className="text-center">SOCIAL CONVERSIONS</h4>
+                <div
+                  className="maincircle d-flex justify-content-center align-items-center mx-0"
+                  style={{ height: "100%", width: "100%" }}
+                >
+                  <div
+                    className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
+                    style={{ width: "100%" }}
+                  >
+                    <PieChart
+                      series={[
+                        {
+                          data: [
+                            {
+                              id: 0,
+                              value: 10,
+                              label: "FACEBOOK",
+                            },
+                            {
+                              id: 1,
+                              value: 15,
+                              label: "INSTAGRAM",
+                            },
+                            {
+                              id: 2,
+                              value: 20,
+                              label: "GOOGLE",
+                            },
+                            {
+                              id: 3,
+                              value: 10,
+                              label: "YOUTUBE",
+                            },
+                            {
+                              id: 4,
+                              value: 15,
+                              label: "WHATSAPP",
+                            },
+                          ],
+                        },
+                      ]}
+                      width={790}
+                      height={250}
+                      margin={{ right: 300 }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col  d-flex flex-column justify-content-center  align-items-center"
+                style={{ height: "400px", width: "50%", margin: "50px" }}
+              >
+                <h4 className="text-right">AGENCY CONVERSIONS</h4>
+                <div
+                  className="maincircle d-flex justify-content-center align-items-center mx-0"
+                  style={{ height: "100%", width: "100%" }}
+                >
+                  <div
+                    className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
+                    style={{ width: "100%" }}
+                  >
+                    <PieChart
+                      series={[
+                        {
+                          data: [
+                            {
+                              id: 0,
+                              value: 10,
+                              label: "AGENCY 1",
+                            },
+                            {
+                              id: 1,
+                              value: 15,
+                              label: "AGENCY 2",
+                            },
+                            {
+                              id: 2,
+                              value: 20,
+                              label: "AGENCY 3",
+                            },
+                            {
+                              id: 3,
+                              value: 10,
+                              label: "AGENCY 4",
+                            },
+                            {
+                              id: 4,
+                              value: 30,
+                              label: "AGENCY 5",
+                            },
+                          ],
+                        },
+                      ]}
+                      width={790}
+                      height={250}
+                      margin={{ right: 300 }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+<div className="transparent-table d-flex justify-content-between">
+                <table className="table me-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">PLATFORM</th>
+                      <th scope="col">CONVERSION</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>FACEBOOK</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>INSTAGRAM</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>GOOGLE</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>YOUTUBE</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>WHATSAPP</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table className="table ms-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">AGENCY</th>
+                      <th scope="col">CONVERSION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>AGENCY 1</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>AGENCY 2</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>AGENCY 3</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>AGENCY 4</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>AGENCY 5</td>
+                      <td></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1120,22 +1867,26 @@ const SuperAdmin = () => {
 
           <div className="roas_section p-5" id="pos">
             <div class="row">
-              <h1 className="text-center p-5">
-                SALES APPROVAL POINT (POS SYSTEM) : SUPER ADMIN VIEW{" "}
-              </h1>
+            <h2 className="text-center text-decoration-underline p-3">
+                POS : SUPER ADMIN{" "}
+              </h2>
 
               <div className="transparent-table">
                 <table className="table">
                   <thead>
                     <tr>
-                      <th scope="col">CUSTOMER.ID/PHONE</th>
-                      <th scope="col">OUTLET ID</th>
-                      <th scope="col">VALIDITY/ TRANSACTION ID</th>
-                      <th scope="col">TOTAL AMOUNT + GST</th>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">CUSOMER NAME</th>
+                      <th scope="col">CUSTOMER PHONE</th>
+                      <th scope="col">OUTLET NAME</th>
+                      <th scope="col">VALIDITY</th>
+                      <th scope="col">GROSS AMOUNT</th>
                       <th scope="col">ELIGIBILITY</th>
-                      <th scope="col">COUPON</th>
+                      <th scope="col">TOTAL AMOUNT(GST)</th>
+                      <th scope="col">COUPONS</th>
                       <th scope="col">FINAL AMOUNT</th>
                       <th scope="col">STATUS</th>
+                      <th scope="col">TRANSACTION ID</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1148,6 +1899,10 @@ const SuperAdmin = () => {
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td>Otto</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
@@ -1158,6 +1913,10 @@ const SuperAdmin = () => {
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td>Otto</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
@@ -1167,6 +1926,10 @@ const SuperAdmin = () => {
                       <td>Mark</td>
                       <td>Otto</td>
                       <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
                       <td>Otto</td>
                     </tr>
                   </tbody>
@@ -1177,39 +1940,41 @@ const SuperAdmin = () => {
 
           <div className="roas_section p-5" id="accounts">
             <div class="row">
-              <h1 className="text-center p-5">ACCOUNTS </h1>
+            <h2 className="text-center text-decoration-underline p-3">
+                SETTINGS{" "}
+              </h2>
 
               <div className="transparent-table">
                 <table className="table">
                   <thead>
                     <tr>
-                      <th scope="col">CHANGE EMAIL</th>
-                      <th scope="col">MANAGE APPROVALS</th>
+                      <th scope="col">MY PROFILE</th>
+                      <th scope="col">OVER VIEW</th>
                       <th scope="col">MANAGE ADMINS</th>
                       <th scope="col">MANAGE PARTNERS</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">CHANGE PASSWORD</th>
+                      <td scope="row">CHANGE EMAIL</td>
                       <td>OUTLET</td>
-                      <td>ADMIN!</td>
+                      <td>ADMIN 1</td>
                       <td>EVENT PARTNERS</td>
                     </tr>
                     <tr>
-                      <th scope="row">SOCIAL MEDIA</th>
+                      <td scope="row">CHANGE PASSWORD</td>
                       <td>EVENT</td>
-                      <td>ADMIN2</td>
+                      <td>ADMIN 2</td>
                       <td>ARTIST PARTNERS</td>
                     </tr>
                     <tr>
-                      <th scope="row">LOGOUT</th>
+                    <td scope="row">SOCIAL HANDLES</td>
                       <td>USER</td>
-                      <td>CONTENT WRITER</td>
+                      <td></td>
                       <td></td>
                     </tr>
                     <tr>
-                      <th scope="row"></th>
+                      <td scope="row">LOGOUT</td>
                       <td>ARTIST</td>
                       <td></td>
                       <td></td>
@@ -1228,7 +1993,7 @@ const SuperAdmin = () => {
                     </tr>
                     <tr>
                       <th scope="row"></th>
-                      <td>CONTENTS/STORIES</td>
+                      <td>STORIES</td>
                       <td></td>
                       <td></td>
                     </tr>

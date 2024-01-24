@@ -1,5 +1,5 @@
 import React from "react";
-import earth_green from "../website_assets/videos/earth_green.mp4";
+
 import earth_brown from "../website_assets/videos/earth_brown.mp4";
 
 import { FaArrowRightToBracket } from "react-icons/fa6";
@@ -8,7 +8,7 @@ const Admin1 = () => {
   return (
     <div className="bgContainer">
       <div className="overlay">
-        <video className="bgVideo" src={earth_green} autoPlay loop muted />
+        <video className="bgVideo" src={earth_brown} autoPlay loop muted />
         <div className="content">
           <div className="parent">
             <div>

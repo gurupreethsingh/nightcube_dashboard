@@ -90,7 +90,7 @@ const Outlets = () => {
 
             <div className="mainsection content">
               <div class="container-fluid text-center">
-                <div class="row">
+              <div class="row">
                   <div
                     class="col  d-flex flex-column justify-content-start align-items-center"
                     style={{ height: "400px", width: "25%" }}
@@ -104,19 +104,22 @@ const Outlets = () => {
                         className="piechart d-flex justify-content-start align-items-center  custom-pie-chart-container"
                         style={{ width: "100%" }}
                       >
-                        <PieChart
-                          series={[
-                            {
-                              data: [
-                                { id: 0, value: 10, label: "MALE" },
-                                { id: 1, value: 15, label: "FEMALE" },
-                              ],
-                            },
-                          ]}
-                          width={500}
-                          height={250}
-                          margin={{ right: 300 }}
-                        />
+                          <PieChart
+                            series={[
+                              {
+                                data: [
+                                  { id: 0, value: 10,  label: "MALE" ,    color : "#00FC7E" },
+                                  { id: 1, value: 15,  label: "FEMALE"  , color  :"#013649"},
+                                ],
+                                highlightScope: { faded: 'global', highlighted: 'item' },
+                                faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                              },
+                            ]}
+                            width={500}
+                            height={250}
+                            margin={{ right: 300 }}
+                          />
+
                       </div>
                     </div>
                   </div>
@@ -138,13 +141,15 @@ const Outlets = () => {
                           series={[
                             {
                               data: [
-                                { id: 0, value: 10, label: "18 to 21" },
-                                { id: 1, value: 15, label: "21 to 25" },
-                                { id: 2, value: 20, label: "26 to 30" },
-                                { id: 3, value: 10, label: "31 to 35" },
-                                { id: 4, value: 15, label: "36 to 40" },
-                                { id: 5, value: 20, label: "40 +    " },
+                                { id: 0, value: 10, label: "16 to 21" , color : "#00FC7E"}, // green
+                                { id: 1, value: 15, label: "21 to 25", color : "#00EBFA" }, // blue
+                                { id: 2, value: 20, label: "26 to 30"  , color : "#FAF700"}, // yellow
+                                { id: 3, value: 10, label: "31 to 35"  , color: "#FFFFFF"}, // white
+                                { id: 4, value: 15, label: "36 to 40" , color: "#FF3600"}, // orange
+                                { id: 5, value: 20, label: "40 +    "  , color  :"#FE0041"}, // red
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
                           width={500}
@@ -172,10 +177,14 @@ const Outlets = () => {
                           series={[
                             {
                               data: [
-                                { id: 0, value: 10, label: "ONCE A WEEK" },
-                                { id: 1, value: 15, label: "ONCE IN 2 WEEKS" },
-                                { id: 2, value: 20, label: "ONCE A MONTH" },
+                                { id: 0, value: 10, label: "ONCE A WEEK" ,      color : "#FE0041"},
+                                { id: 1, value: 15, label: "ONCE IN 2 WEEKS" , color : "#FAF700"},
+                                { id: 2, value: 20, label: "ONCE A MONTH" ,    color : "#00FC7E" },
                               ],
+
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+
                             },
                           ]}
                           width={550}
@@ -203,10 +212,12 @@ const Outlets = () => {
                           series={[
                             {
                               data: [
-                                { id: 0, value: 10, label: "WHATSAPP" },
-                                { id: 1, value: 15, label: "EMAIL" },
-                                { id: 2, value: 20, label: "TEXT MESSAGE" },
+                                { id: 0, value: 10, label: "WHATSAPP" , color : "#00FC7E"}, // green 
+                                { id: 1, value: 15, label: "EMAIL"  , color : "#FAF700"},    // yellow
+                                { id: 2, value: 20, label: "TEXT MESSAGE" , color : "#FE0041" }, // red
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
                           width={500}
@@ -239,34 +250,43 @@ const Outlets = () => {
                                 {
                                   id: 0,
                                   value: 10,
-                                  label: "BOLYWOOD EDM COMMERTIALS",
+                                  label: "LADIES NIGHT",
+                                   color : "#FAF700"
                                 },
                                 {
                                   id: 1,
                                   value: 15,
-                                  label: "TECHNO UNDERGROUND",
+                                  label: "BRUNCH", color : "#00EBFA"
                                 },
                                 {
                                   id: 2,
                                   value: 20,
-                                  label: "HIPHOP - R&B - TRAP",
-                                },
+                                  label: "FRIDAY NIGHT LIVE", color: "#FF3600"}, // orange
                                 {
                                   id: 3,
                                   value: 10,
-                                  label: "DEEP HOUSE MELODIC",
-                                },
+                                  label: "SATURDAY NIGHT LIVE", color: "#FFFFFF"}, // white
                                 {
                                   id: 4,
                                   value: 15,
-                                  label: "LIVE BAND - METAL ACQUOSTIC",
-                                },
+                                  label: "SUNDAY LIGHT LIVE", color  :"#3396B8"}, // dark blue
                                 {
                                   id: 5,
                                   value: 20,
-                                  label: "ALTERNATIVE ELECTRO INDUSTRIALS",
-                                },
+                                  label: "COSTUMES AND THEMES", color : "#00FC7E"}, // green
+                                {
+                                  id: 6,
+                                  value: 20,
+                                  label: "CONCEPT NIGHTS" , color  :"#FE0041"
+                                }, // red
+                                {
+                                  id: 7,
+                                  value: 23,
+                                  label: "HAPPY HOURS" , color  :"#01950F"
+                                }, // red
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
                           width={790}
@@ -276,7 +296,6 @@ const Outlets = () => {
                       </div>
                     </div>
                   </div>
-
                   <div
                     class="col  d-flex flex-column justify-content-start align-items-center"
                     style={{ height: "400px", width: "33%" }}
@@ -297,44 +316,62 @@ const Outlets = () => {
                                 {
                                   id: 0,
                                   value: 10,
-                                  label: "BOLYWOOD EDM COMMERTIALS",
-                                },
+                                  label: "BOLLYWOOD / COMMERCIALS",color : "#00FC7E"}, // green
                                 {
                                   id: 1,
                                   value: 15,
-                                  label: "TECHNO UNDERGROUND",
-                                },
+                                  label: "EDM / COMMERCIALS", color  :"#900C3F"}, // brown
                                 {
                                   id: 2,
-                                  value: 20,
-                                  label: "HIPHOP - R&B - TRAP",
-                                },
+                                  value: 25,
+                                  label: "TECHNO / UNDERGROUND", color  :"#3696A6"}, // dark blue
                                 {
                                   id: 3,
-                                  value: 10,
-                                  label: "DEEP HOUSE MELODIC",
-                                },
+                                  value: 20,
+                                  label: "DUBSTEP / BASE",color: "#FF3600"}, // orange
                                 {
                                   id: 4,
-                                  value: 15,
-                                  label: "LIVE BAND - METAL ACQUOSTIC",
-                                },
+                                  value: 10,
+                                  label: "BIG ROOM / ELECTRO", color: "#FFFFFF"}, // white
                                 {
                                   id: 5,
+                                  value: 15,
+                                  label: "DEEP / HOUSE",color : "#FAF700"}, // yellow
+                                {
+                                  id: 6,
                                   value: 20,
-                                  label: "ALTERNATIVE ELECTRO INDUSTRIALS",
-                                },
+                                  label: "CHILL / HOUSE",color  :"#6E7C7A"
+                                }, // gray
+
+                                {
+                                  id: 7,
+                                  value: 20,
+                                  label: "HIP-HOP / TRAP",color  :"#013649"
+                                },  // dark blue
+                                
+                                {
+                                  id: 8,
+                                  value: 20,
+                                  label: "LIVE BAND / METAL",color  :"#ED0241"
+                                },  // red
+                                
+                                {
+                                  id: 9,
+                                  value: 20,
+                                  label: "LIVE BAND / ACOUSTIC",color  :"#AD5041"
+                                },  // brown
                               ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
-                          width={790}
+                          width={990}
                           height={250}
                           margin={{ right: 300 }}
                         />
                       </div>
                     </div>
                   </div>
-
                 </div>
 
                 <div className="mainsectionend ">

@@ -25,6 +25,7 @@ const SuperAdmin = () => {
                   aria-controls="offcanvasWithBothOptions"
                 >
                   <FaArrowRightToBracket
+                  
                     style={{ height: "50px", width: "50px", color: "white" }}
                   />
                 </button>
@@ -106,7 +107,7 @@ const SuperAdmin = () => {
                               {
                                 data: [
                                   { id: 0, value: 10,  label: "MALE" ,    color : "#00FC7E" },
-                                  { id: 1, value: 15,  label: "FEMALE"  , color  :"#FFFFFF"},
+                                  { id: 1, value: 15,  label: "FEMALE"  , color  :"#013649"},
                                 ],
                                 highlightScope: { faded: 'global', highlighted: 'item' },
                                 faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
@@ -116,6 +117,7 @@ const SuperAdmin = () => {
                             height={250}
                             margin={{ right: 300 }}
                           />
+
                       </div>
                     </div>
                   </div>
@@ -316,7 +318,7 @@ const SuperAdmin = () => {
                                 {
                                   id: 1,
                                   value: 15,
-                                  label: "EDM / COMMERCIALS", color  :"#900C3F"}, // dark blue
+                                  label: "EDM / COMMERCIALS", color  :"#900C3F"}, // brown
                                 {
                                   id: 2,
                                   value: 25,
@@ -337,25 +339,25 @@ const SuperAdmin = () => {
                                   id: 6,
                                   value: 20,
                                   label: "CHILL / HOUSE",color  :"#6E7C7A"
-                                }, // red
+                                }, // gray
 
                                 {
                                   id: 7,
                                   value: 20,
                                   label: "HIP-HOP / TRAP",color  :"#013649"
-                                }, 
+                                },  // dark blue
                                 
                                 {
                                   id: 8,
                                   value: 20,
                                   label: "LIVE BAND / METAL",color  :"#ED0241"
-                                }, 
+                                },  // red
                                 
                                 {
                                   id: 9,
                                   value: 20,
                                   label: "LIVE BAND / ACOUSTIC",color  :"#AD5041"
-                                }, 
+                                },  // brown
                               ],
                               highlightScope: { faded: 'global', highlighted: 'item' },
                               faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
@@ -401,7 +403,7 @@ const SuperAdmin = () => {
                                 {
                                   id: 3,
                                   value: 20,
-                                  label: "GAANA",color: "#FF3600"}, // orange
+                                  label: "AMAZON MUSIC",color: "#FF3600"}, // orange
                                 {
                                   id: 4,
                                   value: 10,
@@ -413,7 +415,7 @@ const SuperAdmin = () => {
                                 {
                                   id: 6,
                                   value: 20,
-                                  label: "MIXCLOUD",color  :"#6E7C7A"
+                                  label: "BEATPORT",color  :"#6E7C7A"
                                 }, // red
                               ],
                               highlightScope: { faded: 'global', highlighted: 'item' },
@@ -476,7 +478,7 @@ const SuperAdmin = () => {
                                         faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
-                                    width={250}
+                                    width={200}
                                     height={300}
                                   />
                                 </div>
@@ -502,7 +504,7 @@ const SuperAdmin = () => {
                                         data: [20, 50, 30, 40, 23, 97],
                                       },
                                     ]}
-                                    width={400}
+                                    width={380}
                                     height={300}
                                   />
                                 </div>
@@ -522,23 +524,24 @@ const SuperAdmin = () => {
                                   <PieChart
                                     series={[
                                       {
-                                        data: [
-                                          { id: 0, value: 10 , color : "#00FC7E"},  // blue
-                                          { id: 1, value: 15 , color : "#00EBFA"},  // light green
-                                          { id: 2, value: 20 , color : "#FAF700"},  // red
-                                          { id: 3, value: 10 , color : "#FFFFFF"},  // white
-                                          { id: 4, value: 15 , color : "#FF3600"},  // orange
-                                          { id: 5, value: 20 , color : "#FE0041"},  //yellow
-                                          { id: 6, value: 20 , color : "#900C3F"},  // red
-                                          { id: 7, value: 10 , color : "#FFFFFF"},  // white
-                                          { id: 8, value: 15 , color : "#DAF7A6"},  //orange
-                                          { id: 9, value: 20 , color  :"#AD5041"},  // yellow
+                                          data: [
+                                            { id: 0,   value: 10,color : "#00FC7E"}, // green
+                                            { id: 1, value: 15, color  :"#900C3F"}, // brown
+                                            { id: 2,  value: 25,  color  :"#3696A6"}, // dark blue
+                                            { id: 3, value: 20, color: "#FF3600"}, // orange
+                                            { id: 4, value: 10,  color: "#FFFFFF"}, // white
+                                            { id: 5,  value: 15, color : "#FAF700"}, // yellow
+                                            { id: 6, value: 20, color  :"#6E7C7A" }, // gray
+                                            { id: 7, value: 20, color  :"#013649"  },  // dark blue
+                                            { id: 8, value: 20, color  :"#ED0241"},  // red
+                                            { id: 9, value: 20, color  :"#AD5041"},  // brown
+                                        
                                         ],
                                         highlightScope: { faded: 'global', highlighted: 'item' },
                                         faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
-                                    width={250}
+                                    width={200}
                                     height={300}
                                   />
                                 </div>
@@ -549,22 +552,26 @@ const SuperAdmin = () => {
                                       {
                                         id: "barCategories",
                                         data: [
-                                          "BOLLYWOOD",
-                                          "TECHNO",
-                                          "HIP HOP",
-                                          "DEEP HOUSE",
-                                          "LIVE BAND",
-                                          "ELECTRO",
+                                          "BOLLYWOOD/COMMERCIALS",
+                                          "EDM/COMMERCIALS",
+                                          "TECHNO/UNDERGROUND",
+                                          "DUBSTEP/BASE",
+                                          "BIG ROOM/ELECTRO",
+                                          "DEEP/HOUSE",
+                                          "CHILL/HOUSE",
+                                          "HIP-HOP/TRAP",
+                                          "LIVE BAND/METAL",
+                                          "LIVE BAND/ACOUSTIC",
                                         ],
                                         scaleType: "band",
                                       },
                                     ]}
                                     series={[
                                       {
-                                        data: [20, 50, 30, 40, 23, 97],
+                                        data: [20, 50, 30, 40, 23, 97, 40, 23, 97,55],
                                       },
                                     ]}
-                                    width={650}
+                                    width={1700}
                                     height={300}
                                   />
                                 </div>
@@ -587,10 +594,12 @@ const SuperAdmin = () => {
                                     series={[
                                       {
                                         data: [
-                                          { id: 0, value: 10 },
-                                          { id: 1, value: 15 },
-                                          { id: 2, value: 20 },
+                                          { id: 0, value: 10, color : "#FE0041"},
+                                          { id: 1, value: 15,  color : "#FAF700"},
+                                          { id: 2, value: 20, color : "#00FC7E" },
                                         ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
                                     width={250}
@@ -599,26 +608,23 @@ const SuperAdmin = () => {
                                 </div>
 
                                 <div className="piecalculations d-flex align-items-center custom-pie-chart-container">
-                                  <BarChart
-                                    xAxis={[
-                                      {
-                                        id: "barCategories",
-                                        data: [
-                                          "ONCE A WEEK",
-                                          "ONCE 2 WEEKS",
-                                          "ONCE A MONTH",
-                                        ],
-                                        scaleType: "band",
-                                      },
-                                    ]}
-                                    series={[
-                                      {
-                                        data: [40, 23, 97],
-                                      },
-                                    ]}
-                                    width={440}
-                                    height={300}
-                                  />
+                                <BarChart
+                                xAxis={[
+                                  {
+                                    id: "barCategories",
+                                    data: ["ONCE A WEEK", "ONCE 2 WEEKS", "ONCE A MONTH"],
+                                    scaleType: "band",
+                                  },
+                                ]}
+                                series={[
+                                  {
+                                    id: "barSeries",
+                                    data: [40, 23, 97],
+                                  },
+                                ]}
+                                width={440}
+                                height={300}
+                              />
                                 </div>
                               </div>
                             </div>
@@ -637,9 +643,11 @@ const SuperAdmin = () => {
                                     series={[
                                       {
                                         data: [
-                                          { id: 0, value: 10 },
-                                          { id: 1, value: 15 },
+                                          { id: 0, value: 10,  color : "#00FC7E" },
+                                          { id: 1, value: 15,  color  :"#013649"},
                                         ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
                                     width={210}
@@ -682,10 +690,12 @@ const SuperAdmin = () => {
                                     series={[
                                       {
                                         data: [
-                                          { id: 0, value: 10 },
-                                          { id: 1, value: 15 },
-                                          { id: 2, value: 20 },
+                                          { id: 0, value: 10, color : "#00FC7E"}, // green 
+                                          { id: 1, value: 15,  color : "#FAF700"},    // yellow
+                                          { id: 2, value: 20,  color : "#FE0041" }, // red
                                         ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
                                     width={250}
@@ -734,13 +744,37 @@ const SuperAdmin = () => {
                                     series={[
                                       {
                                         data: [
-                                          { id: 0, value: 10 },
-                                          { id: 1, value: 15 },
-                                          { id: 2, value: 20 },
-                                          { id: 3, value: 10 },
-                                          { id: 4, value: 15 },
-                                          { id: 5, value: 20 },
+                                            {
+                                              id: 0, value: 10,
+                                               color : "#FAF700"
+                                            },
+                                            {
+                                              id: 1, value: 15, color : "#00EBFA"
+                                            },
+                                            {
+                                              id: 2,
+                                              value: 20,
+                                               color: "#FF3600"}, // orange
+                                            {
+                                              id: 3,
+                                              value: 10, color: "#FFFFFF"}, // white
+                                            {
+                                              id: 4,
+                                              value: 15, color  :"#3396B8"}, // dark blue
+                                            {
+                                              id: 5,
+                                              value: 20, color : "#00FC7E"}, // green
+                                            {
+                                              id: 6,
+                                              value: 20, color  :"#FE0041"
+                                            }, // red
+                                            {
+                                              id: 7,
+                                              value: 23, color  :"#01950F"
+                                            }, // red
                                         ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
                                     width={250}
@@ -769,7 +803,7 @@ const SuperAdmin = () => {
                                         data: [20, 50, 30, 40, 23, 97],
                                       },
                                     ]}
-                                    width={650}
+                                    width={550}
                                     height={300}
                                   />
                                 </div>
@@ -790,13 +824,31 @@ const SuperAdmin = () => {
                                     series={[
                                       {
                                         data: [
-                                          { id: 0, value: 10 },
-                                          { id: 1, value: 15 },
-                                          { id: 2, value: 20 },
-                                          { id: 3, value: 10 },
-                                          { id: 4, value: 15 },
-                                          { id: 5, value: 20 },
+                                            {
+                                              id: 0,
+                                              value: 10,color : "#00FC7E"}, // green
+                                            {
+                                              id: 1,
+                                              value: 15, color  :"#900C3F"}, // dark blue
+                                            {
+                                              id: 2,
+                                              value: 25,color  :"#3696A6"}, // dark blue
+                                            {
+                                              id: 3,
+                                              value: 20,color: "#FF3600"}, // orange
+                                            {
+                                              id: 4,
+                                              value: 10, color: "#FFFFFF"}, // white
+                                            {
+                                              id: 5,
+                                              value: 15,color : "#FAF700"}, // yellow
+                                            {
+                                              id: 6,
+                                              value: 20,color  :"#6E7C7A"
+                                            }, // red
                                         ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                       },
                                     ]}
                                     width={250}
@@ -810,12 +862,13 @@ const SuperAdmin = () => {
                                       {
                                         id: "barCategories",
                                         data: [
-                                          "ITUNES",
+                                          "iTUNES",
                                           "SPOTIFY",
-                                          "MIXCLD",
-                                          "SOUNDCLD",
-                                          "G/Y/YM",
-                                          "GAANA",
+                                          "JIO SAAVN",
+                                          "AMAZON MUSIC",
+                                          "SOUND CLOUD",
+                                          "GOOGLE YOUTUBE MUSIC",
+                                          "BEATPORT",
                                         ],
                                         scaleType: "band",
                                       },
@@ -825,7 +878,7 @@ const SuperAdmin = () => {
                                         data: [20, 50, 30, 40, 23, 97],
                                       },
                                     ]}
-                                    width={650}
+                                    width={750}
                                     height={300}
                                   />
                                 </div>
@@ -840,191 +893,6 @@ const SuperAdmin = () => {
               </div>
             </div>
           </div>
-
-          {/* <div className="roas_section p-5" id="revenueros">
-            <div class="row">
-              <h1 className="text-center p-5">
-                REVENUE ON ADS SPENT{" "}
-              </h1>
-              <div
-                class="col  d-flex flex-column justify-content-start align-items-center "
-                style={{ height: "400px", width: "33%" }}
-              >
-                <h4 className="text-center">SOCIAL LINKS</h4>
-                <div
-                  className="maincircle d-flex justify-content-center align-items-center mx-0"
-                  style={{ height: "100%", width: "100%" }}
-                >
-                  <div
-                    className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
-                    style={{ width: "100%" }}
-                  >
-                    <PieChart
-                      series={[
-                        {
-                          data: [
-                            {
-                              id: 0,
-                              value: 10,
-                              label: "FACEBOOK",
-                            },
-                            {
-                              id: 1,
-                              value: 15,
-                              label: "INSTAGRAM",
-                            },
-                            {
-                              id: 2,
-                              value: 20,
-                              label: "GOOGLE",
-                            },
-                            {
-                              id: 3,
-                              value: 10,
-                              label: "YOUTUBE",
-                            },
-                            {
-                              id: 4,
-                              value: 15,
-                              label: "WHATSAPP",
-                            },
-                          ],
-                        },
-                      ]}
-                      width={790}
-                      height={250}
-                      margin={{ right: 300 }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="col  d-flex flex-column justify-content-start align-items-center"
-                style={{ height: "400px", width: "33%" }}
-              >
-                <h4 className="text-center">AD AGENCY LINKS</h4>
-                <div
-                  className="maincircle d-flex justify-content-center align-items-center mx-0"
-                  style={{ height: "100%", width: "100%" }}
-                >
-                  <div
-                    className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
-                    style={{ width: "100%" }}
-                  >
-                    <PieChart
-                      series={[
-                        {
-                          data: [
-                            {
-                              id: 0,
-                              value: 10,
-                              label: "AGENCY 1",
-                            },
-                            {
-                              id: 1,
-                              value: 15,
-                              label: "AGENCY 2",
-                            },
-                            {
-                              id: 2,
-                              value: 20,
-                              label: "AGENCY 3",
-                            },
-                            {
-                              id: 3,
-                              value: 10,
-                              label: "AGENCY 4",
-                            },
-                          ],
-                        },
-                      ]}
-                      width={790}
-                      height={250}
-                      margin={{ right: 300 }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="transparent-table d-flex justify-content-between">
-                <table className="table me-5">
-                  <thead>
-                    <tr>
-                      <th scope="col">SL NO</th>
-                      <th scope="col">PLATFORM</th>
-                      <th scope="col">LINK</th>
-
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <table className="table ms-5">
-                  <thead>
-                    <tr>
-                      <th scope="col">SL NO</th>
-                      <th scope="col">AGENCY</th>
-                      <th scope="col">LINK</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div> */}
 
 <div className="roas_section p-2" id="revenueros">
             <div class="row">
@@ -1051,29 +919,31 @@ const SuperAdmin = () => {
                             {
                               id: 0,
                               value: 10,
-                              label: "FACEBOOK",
+                              label: "FACEBOOK", color : "red", 
                             },
                             {
                               id: 1,
                               value: 15,
-                              label: "INSTAGRAM",
+                              label: "INSTAGRAM", color : "yellow", 
                             },
                             {
                               id: 2,
                               value: 20,
-                              label: "GOOGLE",
+                              label: "GOOGLE", color : "green", 
                             },
                             {
                               id: 3,
                               value: 10,
-                              label: "YOUTUBE",
+                              label: "YOUTUBE", color : "white", 
                             },
                             {
                               id: 4,
                               value: 15,
-                              label: "WHATSAPP",
+                              label: "WHATSAPP", color : "cyan",
                             },
                           ],
+                          highlightScope: { faded: 'global', highlighted: 'item' },
+                          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                         },
                       ]}
                       width={790}
@@ -1104,29 +974,31 @@ const SuperAdmin = () => {
                             {
                               id: 0,
                               value: 10,
-                              label: "AGENCY 1",
+                              label: "AGENCY 1", color : "red", 
                             },
                             {
                               id: 1,
                               value: 15,
-                              label: "AGENCY 2",
+                              label: "AGENCY 2", color : "yellow", 
                             },
                             {
                               id: 2,
                               value: 20,
-                              label: "AGENCY 3",
+                              label: "AGENCY 3", color : "green", 
                             },
                             {
                               id: 3,
                               value: 10,
-                              label: "AGENCY 4",
+                              label: "AGENCY 4", color : "white", 
                             },
                             {
                               id: 4,
                               value: 15,
-                              label: "AGENCY 5",
+                              label: "AGENCY 5", color : "cyan",
                             },
                           ],
+                          highlightScope: { faded: 'global', highlighted: 'item' },
+                          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                         },
                       ]}
                       width={790}
@@ -1238,32 +1110,34 @@ const SuperAdmin = () => {
                       series={[
                         {
                           data: [
-                            {
+                             {
                               id: 0,
                               value: 10,
-                              label: "FACEBOOK",
+                              label: "FACEBOOK", color : "red", 
                             },
                             {
                               id: 1,
                               value: 15,
-                              label: "INSTAGRAM",
+                              label: "INSTAGRAM", color : "yellow", 
                             },
                             {
                               id: 2,
                               value: 20,
-                              label: "GOOGLE",
+                              label: "GOOGLE", color : "green", 
                             },
                             {
                               id: 3,
                               value: 10,
-                              label: "YOUTUBE",
+                              label: "YOUTUBE", color : "white", 
                             },
                             {
                               id: 4,
                               value: 15,
-                              label: "WHATSAPP",
+                              label: "WHATSAPP", color : "cyan",
                             },
                           ],
+                          highlightScope: { faded: 'global', highlighted: 'item' },
+                          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                         },
                       ]}
                       width={790}
@@ -1294,29 +1168,31 @@ const SuperAdmin = () => {
                             {
                               id: 0,
                               value: 10,
-                              label: "AGENCY 1",
+                              label: "AGENCY 1", color : "red", 
                             },
                             {
                               id: 1,
                               value: 15,
-                              label: "AGENCY 2",
+                              label: "AGENCY 2", color : "yellow", 
                             },
                             {
                               id: 2,
                               value: 20,
-                              label: "AGENCY 3",
+                              label: "AGENCY 3", color : "green", 
                             },
                             {
                               id: 3,
                               value: 10,
-                              label: "AGENCY 4",
+                              label: "AGENCY 4", color : "white", 
                             },
                             {
                               id: 4,
-                              value: 30,
-                              label: "AGENCY 5",
+                              value: 15,
+                              label: "AGENCY 5", color : "cyan",
                             },
                           ],
+                          highlightScope: { faded: 'global', highlighted: 'item' },
+                          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                         },
                       ]}
                       width={790}
@@ -1326,83 +1202,6 @@ const SuperAdmin = () => {
                   </div>
                 </div>
               </div>
-
-              {/* <div className="transparent-table d-flex justify-content-between">
-                <table className="table me-5">
-                  <thead>
-                    <tr>
-                      <th scope="col">SL NO</th>
-                      <th scope="col">PLATFORM</th>
-                      <th scope="col">CTR</th>
-
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <table className="table ms-5">
-                  <thead>
-                    <tr>
-                      <th scope="col">SL NO</th>
-                      <th scope="col">AGENCY</th>
-                      <th scope="col">CTR</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div> */}
 
 <div className="transparent-table d-flex justify-content-between">
                 <table className="table me-5">
@@ -1508,29 +1307,31 @@ const SuperAdmin = () => {
                             {
                               id: 0,
                               value: 10,
-                              label: "FACEBOOK",
+                              label: "FACEBOOK", color : "red", 
                             },
                             {
                               id: 1,
                               value: 15,
-                              label: "INSTAGRAM",
+                              label: "INSTAGRAM", color : "yellow", 
                             },
                             {
                               id: 2,
                               value: 20,
-                              label: "GOOGLE",
+                              label: "GOOGLE", color : "green", 
                             },
                             {
                               id: 3,
                               value: 10,
-                              label: "YOUTUBE",
+                              label: "YOUTUBE", color : "white", 
                             },
                             {
                               id: 4,
                               value: 15,
-                              label: "WHATSAPP",
+                              label: "WHATSAPP", color : "cyan",
                             },
                           ],
+                          highlightScope: { faded: 'global', highlighted: 'item' },
+                          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                         },
                       ]}
                       width={790}
@@ -1561,29 +1362,31 @@ const SuperAdmin = () => {
                             {
                               id: 0,
                               value: 10,
-                              label: "AGENCY 1",
+                              label: "AGENCY 1", color : "red", 
                             },
                             {
                               id: 1,
                               value: 15,
-                              label: "AGENCY 2",
+                              label: "AGENCY 2", color : "yellow", 
                             },
                             {
                               id: 2,
                               value: 20,
-                              label: "AGENCY 3",
+                              label: "AGENCY 3", color : "green", 
                             },
                             {
                               id: 3,
                               value: 10,
-                              label: "AGENCY 4",
+                              label: "AGENCY 4", color : "white", 
                             },
                             {
                               id: 4,
-                              value: 30,
-                              label: "AGENCY 5",
+                              value: 15,
+                              label: "AGENCY 5", color : "cyan",
                             },
                           ],
+                          highlightScope: { faded: 'global', highlighted: 'item' },
+                          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                         },
                       ]}
                       width={790}
@@ -1699,29 +1502,31 @@ const SuperAdmin = () => {
                             {
                               id: 0,
                               value: 10,
-                              label: "FACEBOOK",
+                              label: "FACEBOOK", color : "red", 
                             },
                             {
                               id: 1,
                               value: 15,
-                              label: "INSTAGRAM",
+                              label: "INSTAGRAM", color : "yellow", 
                             },
                             {
                               id: 2,
                               value: 20,
-                              label: "GOOGLE",
+                              label: "GOOGLE", color : "green", 
                             },
                             {
                               id: 3,
                               value: 10,
-                              label: "YOUTUBE",
+                              label: "YOUTUBE", color : "white", 
                             },
                             {
                               id: 4,
                               value: 15,
-                              label: "WHATSAPP",
+                              label: "WHATSAPP", color : "cyan",
                             },
                           ],
+                          highlightScope: { faded: 'global', highlighted: 'item' },
+                          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                         },
                       ]}
                       width={790}
@@ -1752,29 +1557,31 @@ const SuperAdmin = () => {
                             {
                               id: 0,
                               value: 10,
-                              label: "AGENCY 1",
+                              label: "AGENCY 1", color : "red", 
                             },
                             {
                               id: 1,
                               value: 15,
-                              label: "AGENCY 2",
+                              label: "AGENCY 2", color : "yellow", 
                             },
                             {
                               id: 2,
                               value: 20,
-                              label: "AGENCY 3",
+                              label: "AGENCY 3", color : "green", 
                             },
                             {
                               id: 3,
                               value: 10,
-                              label: "AGENCY 4",
+                              label: "AGENCY 4", color : "white", 
                             },
                             {
                               id: 4,
-                              value: 30,
-                              label: "AGENCY 5",
+                              value: 15,
+                              label: "AGENCY 5", color : "cyan",
                             },
                           ],
+                          highlightScope: { faded: 'global', highlighted: 'item' },
+                          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                         },
                       ]}
                       width={790}

@@ -4,6 +4,7 @@ import { MdExpandCircleDown } from "react-icons/md";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { BarChart } from "@mui/x-charts/BarChart";
+import {Link} from 'react-router-dom';
 
 const SuperAdmin = () => {
   return (
@@ -78,9 +79,9 @@ const SuperAdmin = () => {
                     </a>
                   </li>
                   <li class="nav-item flex-grow-1 text-center">
-                    <a class="nav-link text-light" href="#">
+                    <Link class="nav-link text-light" to="/super-admin-event">
                       EVENTS
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

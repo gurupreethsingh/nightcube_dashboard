@@ -62,11 +62,7 @@ const Admin2 = () => {
 
               <div className="righside flex-grow-1 w-100  ">
                 <ul class="nav nav-underline d-flex justify-content-evenly">
-                  <li class="nav-item flex-grow-1 text-center">
-                    <a class="nav-link text-light" href="#">
-                      USERS
-                    </a>
-                  </li>
+
                   <li class="nav-item flex-grow-1 text-center">
                     <a class="nav-link text-light" href="#">
                       OUTLETS
@@ -74,12 +70,12 @@ const Admin2 = () => {
                   </li>
                   <li class="nav-item flex-grow-1 text-center">
                     <a class="nav-link text-light" href="#">
-                      ARTISTS
+                    POS
                     </a>
                   </li>
                   <li class="nav-item flex-grow-1 text-center">
                     <a class="nav-link text-light" href="#">
-                      EVENTS
+                    STORIES
                     </a>
                   </li>
                 </ul>
@@ -1782,12 +1778,6 @@ const Admin2 = () => {
                     </tr>
                     <tr>
                       <td scope="row">LOGOUT</td>
-                      <td>ARTIST</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"></th>
                       <td>IMAGES</td>
                       <td></td>
                       <td></td>
@@ -1807,12 +1797,6 @@ const Admin2 = () => {
                     <tr>
                       <th scope="row"></th>
                       <td>POS SYSTEM</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"></th>
-                      <td>ROAS SYSTEM</td>
                       <td></td>
                       <td></td>
                     </tr>

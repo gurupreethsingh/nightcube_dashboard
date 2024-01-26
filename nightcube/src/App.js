@@ -14,6 +14,12 @@ import Admin2account from './pages/Admin2account';
 import Admin2 from './pages/Admin2';
 import Admin2pos from './pages/Admin2pos';
 import Admin2stories from './pages/Admin2stories';
+import Admin2Outlet from './pages/Admin2Outlet';
+import SuperAdminEvent from './pages/SuperAdminEvent';
+import SuperAdminArtist from './pages/SuperAdminArtist';
+import SuperAdminOutlets from './pages/SuperAdminOutlets';
+import SuperAdminUser from './pages/SuperAdminUser';
+import SuperAdminPos from './pages/SuperAdminPos';
 
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -24,6 +30,11 @@ function App() {
       <Routes>
         <Route path="/" element={<SuperAdmin />} />
         <Route path="/super-admin" element={<SuperAdmin />} />
+        <Route path="/super-admin-event" element={<SuperAdminEvent />} />
+        <Route path="/super-admin-artist" element={<SuperAdminArtist />} />
+        <Route path="/super-admin-outlets" element={<SuperAdminOutlets />} />
+        <Route path="/super-admin-user" element={<SuperAdminUser />} />
+        <Route path="/super-admin-pos" element={<SuperAdminPos />} />
         <Route path="/admin1" element={<Admin1 />} />
         <Route path="/admin1user" element={<Admin1User />} />
         <Route path="/admin1artist" element={<Admin1artist />} />
@@ -31,7 +42,7 @@ function App() {
         <Route path="/admin1account" element={<Admin1account />} />
         <Route path="/admin2account" element={<Admin2account />} />
         <Route path="/admin2" element={<Admin2 />} />
-        <Route path="/admin2outlets" element={<Admin2 />} />
+        <Route path="/admin2outlet" element={<Admin2Outlet />} />
         <Route path="/admin2pos" element={<Admin2pos />} />
         <Route path="/admin2stories" element={<Admin2stories />} />
         <Route path="/*" element={<NotFound />} />

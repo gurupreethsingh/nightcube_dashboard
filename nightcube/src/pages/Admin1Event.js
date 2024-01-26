@@ -1,19 +1,19 @@
 import React from "react";
-import earth_green from "../website_assets/videos/earth_green.mp4";
-import earth_brown from "../website_assets/videos/earth_brown.mp4";
-
+import nightcube_dashbord_background from '../website_assets/videos/nightcube_dashbord_background.mp4';
+import { MdExpandCircleDown } from "react-icons/md";
 import { FaArrowRightToBracket } from "react-icons/fa6";
-import {Link} from 'react-router-dom';
+import { PieChart } from "@mui/x-charts/PieChart";
+import { BarChart } from "@mui/x-charts/BarChart";
 
 const Admin1Event = () => {
   return (
     <div className="bgContainer">
       <div className="overlay">
-        <video className="bgVideo" src={earth_green} autoPlay loop muted />
+        <video className="bgVideo" src={nightcube_dashbord_background} autoPlay loop muted />
         <div className="content">
           <div className="parent">
             <div>
-              <h1 className="text-center">ADMIN 1</h1>
+              <h4 className="text-center">ADMIN 1 EVENT</h4>
             </div>
             <div className="navsection d-flex align-items-center justify-content-start p-3  ">
               <div className="leftside flex-grow-1 ms-3 me-3">
@@ -25,6 +25,7 @@ const Admin1Event = () => {
                   aria-controls="offcanvasWithBothOptions"
                 >
                   <FaArrowRightToBracket
+                  
                     style={{ height: "50px", width: "50px", color: "white" }}
                   />
                 </button>
@@ -62,20 +63,24 @@ const Admin1Event = () => {
               <div className="righside flex-grow-1 w-100  ">
                 <ul class="nav nav-underline d-flex justify-content-evenly">
                   <li class="nav-item flex-grow-1 text-center">
-                    <Link class="nav-link text-light" to="/admin1user">
+                    <a class="nav-link text-light" href="#">
                       USERS
-                    </Link>
-                  </li>
-
-                  <li class="nav-item flex-grow-1 text-center">
-                  <Link class="nav-link text-light" to="/admin1event">
-                      EVENTS
-                    </Link>
+                    </a>
                   </li>
                   <li class="nav-item flex-grow-1 text-center">
-                  <Link class="nav-link text-light" to="/admin1artist">
+                    <a class="nav-link text-light" href="#">
+                      OUTLETS
+                    </a>
+                  </li>
+                  <li class="nav-item flex-grow-1 text-center">
+                    <a class="nav-link text-light" href="#">
                       ARTISTS
-                    </Link>
+                    </a>
+                  </li>
+                  <li class="nav-item flex-grow-1 text-center">
+                    <a class="nav-link text-light" href="#">
+                      EVENTS
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -83,77 +88,184 @@ const Admin1Event = () => {
 
             <div className="mainsection content">
               <div class="container-fluid text-center">
-              <div className="roas_section ps-5 pe-5"  id = "accounts">
-          <div class="row">
-            <h1>ADMIN 1 - EVENT MODULE</h1>
-                  <div className="transparent-table" >
-                            <table className="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">MONITOR TOTAL EVENTS</th>
-                                <th scope="col">ADD ALL NEW EVENTS</th>
-                                <th scope="col">APPROVE ALL EVENTS AUTO REQUEST ON CHANGES MADE BY OUTLETS-CONDITION TO T.1</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">EDIT AND UPDATE ALL EVENTS TIME, DETAILS, OUTLETS, IMAGES, VIDEOS, CALENDAR</th>
-                                <th>SOLVE AND HELP REGISTERED EVENT ISSUES ON REQUESTS</th>
-                                <th>REPORT ALL CRASH - BUGS - ERRORS @ EVENTS</th>
-                            </tr>
-                            <tr>
-                            <th>DELETE EVENT</th>
-                                <th scope="row">MAIL COMMUNICATION FOR APPROVALS & FIXING ISSUES @ EVENT</th>
-                                <th scope="col">CORROSPONDING COMMUNICATION FOR WELCOME APPROVALS @ EVENTS</th>
-                            </tr>
-                            </tbody>
-                        </table>
+
+                <div class="row mt-5">
+                  <div
+                    class="col  d-flex flex-column justify-content-start align-items-center "
+                    style={{ height: "400px", width: "33%" }}
+                  >
+                    <h4 className="text-center mt-5">ALL EVENTS</h4>
+                    <div
+                      className="maincircle d-flex justify-content-center align-items-center mx-0"
+                      style={{ height: "100%", width: "100%" }}
+                    >
+                      <div
+                        className="piechart d-flex justify-content-start align-items-center custom-pie-chart-container"
+                        style={{ width: "100%" }}
+                      >
+                        <PieChart
+                          series={[
+                            {
+                              data: [
+                                {
+                                  id: 0,
+                                  value: 10,
+                                  label: "LADIES NIGHT",
+                                   color : "#FAF700"
+                                },
+                                {
+                                  id: 1,
+                                  value: 15,
+                                  label: "BRUNCH", color : "#00EBFA"
+                                },
+                                {
+                                  id: 2,
+                                  value: 20,
+                                  label: "FRIDAY NIGHT LIVE", color: "#FF3600"}, // orange
+                                {
+                                  id: 3,
+                                  value: 10,
+                                  label: "SATURDAY NIGHT LIVE", color: "#FFFFFF"}, // white
+                                {
+                                  id: 4,
+                                  value: 15,
+                                  label: "SUNDAY LIGHT LIVE", color  :"#3396B8"}, // dark blue
+                                {
+                                  id: 5,
+                                  value: 20,
+                                  label: "COSTUMES & THEMES", color : "#00FC7E"}, // green
+                                {
+                                  id: 6,
+                                  value: 20,
+                                  label: "CONCEPT NIGHTS" , color  :"#FE0041"
+                                }, // red
+                                {
+                                  id: 7,
+                                  value: 23,
+                                  label: "HAPPY HOURS" , color  :"#01950F"
+                                }, // red
+                              ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                            },
+                          ]}
+                          width={790}
+                          height={250}
+                          margin={{ right: 300 }}
+                        />
                       </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="container-fluid text-center">
-              <div className="roas_section ps-5 pe-5"  id = "accounts">
-          <div class="row">
-                  <div className="transparent-table" >
-                            <table className="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">EVENT ID</th>
-                                <th scope="col">EVENT DETAILS</th>
-                                <th scope="col">IMAGES/VIDEOS</th>
-                                <th scope="col">REGISTRATION DATE/MONTH</th>
-                                <th scope="col">CALENDER</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <th>USERS 1</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
+                <div className="mainsectionend ">
+                  <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed text-right text-light d-block"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#panelsStayOpen-collapseThree"
+                          aria-expanded="true"
+                          aria-controls="panelsStayOpen-collapseThree"
+                        >
+                          {" "}EXPAND DISTRIBUTION &nbsp;
+                          <MdExpandCircleDown />
+                        </button>
+                      </h2>
+                      <div
+                        id="panelsStayOpen-collapseThree"
+                        class="accordion-collapse collapse"
+                      >
+                        <div class="accordion-body p-5">
 
-                            <tr>
-                                <th scope="row">2</th>
-                                <th>USERS 2</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
+                          <div class="row custom-pie-chart-container">
+                            <div
+                              class="col d-flex flex-column justify-content-center align-items-center"
+                              style={{ height: "400px" }}
+                            >
+                              <h4 className="text-light">ALL EVENTS</h4>
+                              <div
+                                className="maincircle d-flex justify-content-center"
+                                style={{ height: "100%", width: "100%" }}
+                              >
+                                <div className="piechart d-flex align-items-center">
+                                  <PieChart
+                                    series={[
+                                      {
+                                        data: [
+                                            {
+                                              id: 0, value: 10,
+                                               color : "#FAF700"
+                                            },
+                                            {
+                                              id: 1, value: 15, color : "#00EBFA"
+                                            },
+                                            {
+                                              id: 2,
+                                              value: 20,
+                                               color: "#FF3600"}, // orange
+                                            {
+                                              id: 3,
+                                              value: 10, color: "#FFFFFF"}, // white
+                                            {
+                                              id: 4,
+                                              value: 15, color  :"#3396B8"}, // dark blue
+                                            {
+                                              id: 5,
+                                              value: 20, color : "#00FC7E"}, // green
+                                            {
+                                              id: 6,
+                                              value: 20, color  :"#FE0041"
+                                            }, // red
+                                            {
+                                              id: 7,
+                                              value: 23, color  :"#01950F"
+                                            }, // red
+                                        ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                                      },
+                                    ]}
+                                    width={250}
+                                    height={300}
+                                  />
+                                </div>
 
-                            <tr>
-                                <th scope="row">3</th>
-                                <th>USERS 3</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
-                            </tbody>
-                        </table>
+                                <div className="piecalculations d-flex align-items-center">
+                                  <BarChart
+                                    xAxis={[
+                                      {
+                                        id: "barCategories",
+                                        data: [
+                                          "LADIES NIGHT",
+                                          "BRUNCH",
+                                          "FRIDAY NIGHT LIVE",
+                                          "SATURDAY NIGHT LIVE",
+                                          "SUNDAY NIGHT LIVE",
+                                          "COSTUMES & THEMES",
+                                          "CONCEPT NIGHTS",
+                                          "HAPPY HOURS",
+                                        ],
+                                        scaleType: "band",
+                                      },
+                                    ]}
+                                    series={[
+                                      {
+                                        data: [20, 50, 30, 40, 23, 97,55,66],
+                                      },
+                                    ]}
+                                    width={1450}
+                                    height={300}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
+                    </div>
                   </div>
                 </div>
               </div>

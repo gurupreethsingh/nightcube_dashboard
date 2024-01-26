@@ -5,7 +5,7 @@ import { FaArrowRightToBracket } from "react-icons/fa6";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { BarChart } from "@mui/x-charts/BarChart";
 
-const Admin1artist = () => {
+const SuperAdminOutlets = () => {
   return (
     <div className="bgContainer">
       <div className="overlay">
@@ -13,7 +13,7 @@ const Admin1artist = () => {
         <div className="content">
           <div className="parent">
             <div>
-              <h4 className="text-center">ADMIN 1 ARTIST</h4>
+              <h4 className="text-center">SUPER ADMIN/OUTLETS</h4>
             </div>
             <div className="navsection d-flex align-items-center justify-content-start p-3  ">
               <div className="leftside flex-grow-1 ms-3 me-3">
@@ -94,7 +94,7 @@ const Admin1artist = () => {
                     class="col  d-flex flex-column justify-content-start align-items-center "
                     style={{ height: "400px", width: "33%" }}
                   >
-                    <h4 className="text-center mt-5">ALL ARTISTS</h4>
+                    <h4 className="text-center mt-5">ALL OUTLETS</h4>
                     <div
                       className="maincircle d-flex justify-content-center align-items-center mx-0"
                       style={{ height: "100%", width: "100%" }}
@@ -110,41 +110,46 @@ const Admin1artist = () => {
                                 {
                                   id: 0,
                                   value: 10,
-                                  label: "ELECTRONIC MUSICIAN & PRODUCER",
+                                  label: "NIGHTCLUB",
                                    color : "#FAF700"
                                 },
                                 {
                                   id: 1,
                                   value: 15,
-                                  label: "DJ", color : "#00EBFA"
+                                  label: "LOUNGE", color : "#00EBFA"
                                 },
                                 {
                                   id: 2,
                                   value: 20,
-                                  label: "KARAOKE", color: "#FF3600"}, // orange
+                                  label: "ROOFTOP BAR", color: "#FF3600"}, // orange
                                 {
                                   id: 3,
                                   value: 10,
-                                  label: "LIVE BAND", color: "#FFFFFF"}, // white
+                                  label: "RESTO CAFE", color: "#FFFFFF"}, // white
                                 {
                                   id: 4,
                                   value: 15,
-                                  label: "VOCALIST AND SINGER", color  :"#3396B8"}, // dark blue
+                                  label: "PUB", color  :"#3396B8"}, // dark blue
                                 {
                                   id: 5,
                                   value: 20,
-                                  label: "ACOUSTIC", color : "#00FC7E"}, // green
+                                  label: "POOLSIDE", color : "#00FC7E"}, // green
                                 {
                                   id: 6,
                                   value: 20,
-                                  label: "METAL & TOOLS" , color  :"#FE0041"
+                                  label: "OPEN AIR" , color  :"#FE0041"
+                                }, // red
+                                {
+                                  id: 7,
+                                  value: 23,
+                                  label: "CONCERT HALL" , color  :"#01950F"
                                 }, // red
                               ],
                               highlightScope: { faded: 'global', highlighted: 'item' },
                               faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                           ]}
-                          width={890}
+                          width={790}
                           height={250}
                           margin={{ right: 300 }}
                         />
@@ -180,7 +185,7 @@ const Admin1artist = () => {
                               class="col d-flex flex-column justify-content-center align-items-center"
                               style={{ height: "400px" }}
                             >
-                              <h4 className="text-light">ALL ARTISTS</h4>
+                              <h4 className="text-light">ALL OUTLETS</h4>
                               <div
                                 className="maincircle d-flex justify-content-center"
                                 style={{ height: "100%", width: "100%" }}
@@ -234,23 +239,24 @@ const Admin1artist = () => {
                                       {
                                         id: "barCategories",
                                         data: [
-                                          "ELECTRONIC MUSICIAN & PRODUCER",
-                                          "DJ",
-                                          "KARAOKE",
-                                          "LIVE BAND",
-                                          "VOCALIST AND SINGER",
-                                          "ACOUSTIC",
-                                          "METAL & TOOLS",
+                                          "NIGHTCLUB",
+                                          "LOUNGE",
+                                          "ROOFTOP BAR",
+                                          "RESTO CAFE",
+                                          "PUB",
+                                          "POOLSIDE",
+                                          "OPEN AIR" ,
+                                          "CONCERT HALL" ,
                                         ],
                                         scaleType: "band",
                                       },
                                     ]}
                                     series={[
                                       {
-                                        data: [20, 50, 30, 40, 23, 97, 77],
+                                        data: [20, 50, 30, 40, 23, 97, 55, 66],
                                       },
                                     ]}
-                                    width={1250}
+                                    width={1450}
                                     height={300}
                                   />
                                 </div>
@@ -271,4 +277,4 @@ const Admin1artist = () => {
   );
 };
 
-export default Admin1artist;
+export default SuperAdminOutlets;

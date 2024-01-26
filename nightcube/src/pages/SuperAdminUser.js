@@ -5,7 +5,7 @@ import { FaArrowRightToBracket } from "react-icons/fa6";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { BarChart } from "@mui/x-charts/BarChart";
 
-const Admin1 = () => {
+const SuperAdminUser = () => {
   return (
     <div className="bgContainer">
       <div className="overlay">
@@ -13,7 +13,7 @@ const Admin1 = () => {
         <div className="content">
           <div className="parent">
             <div>
-              <h1 className="text-center">ADMIN 1</h1>
+              <h4 className="text-center">SUPER ADMIN USER</h4>
             </div>
             <div className="navsection d-flex align-items-center justify-content-start p-3  ">
               <div className="leftside flex-grow-1 ms-3 me-3">
@@ -67,7 +67,11 @@ const Admin1 = () => {
                       USERS
                     </a>
                   </li>
-
+                  <li class="nav-item flex-grow-1 text-center">
+                    <a class="nav-link text-light" href="#">
+                      OUTLETS
+                    </a>
+                  </li>
                   <li class="nav-item flex-grow-1 text-center">
                     <a class="nav-link text-light" href="#">
                       ARTISTS
@@ -84,7 +88,8 @@ const Admin1 = () => {
 
             <div className="mainsection content">
               <div class="container-fluid text-center">
-                <div class="row">
+
+              <div class="row">
                   <div
                     class="col  d-flex flex-column justify-content-start align-items-center"
                     style={{ height: "400px", width: "25%" }}
@@ -222,7 +227,6 @@ const Admin1 = () => {
                     </div>
                   </div>
                 </div>
-
 
                 <div className="mainsectionend ">
                   <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -454,64 +458,13 @@ const Admin1 = () => {
                               </div>
                             </div>
                           </div>
+
+                          
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="roas_section p-5" id="accounts">
-            <div class="row">
-            <h2 className="text-center text-decoration-underline p-3">
-                SETTINGS{" "}
-              </h2>
-
-              <div className="transparent-table">
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">MY PROFILE</th>
-                      <th scope="col">OVER VIEW</th>
-                      <th scope="col">MANAGE ADMINS</th>
-                      <th scope="col">MANAGE PARTNERS</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td scope="row">CHANGE EMAIL</td>
-                      <td>ARTIST</td>
-                      <td>ADMIN 1</td>
-                      <td>EVENT PARTNERS</td>
-                    </tr>
-                    <tr>
-                      <td scope="row">CHANGE PASSWORD</td>
-                      <td>EVENT</td>
-                      <td>ADMIN 2</td>
-                      <td>ARTIST PARTNERS</td>
-                    </tr>
-                    <tr>
-                    <td scope="row">SOCIAL HANDLES</td>
-                      <td>USER</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td scope="row">LOGOUT</td>
-                      <td>IMAGES</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"></th>
-                      <td>VIDEOS</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
               </div>
             </div>
           </div>
@@ -521,39 +474,4 @@ const Admin1 = () => {
   );
 };
 
-export default Admin1;
-
-
-
-{/* <div className="mainsection content">
-<div class="container-fluid text-center">
-<div className="roas_section p-5"  id = "accounts">
-<div class="row">
-<h1>ADMIN 1 - USER MODULE</h1>
-    <div className="transparent-table" >
-              <table className="table">
-              <thead>
-              <tr>
-                  <th scope="col">MONITOR TOTAL USERS</th>
-                  <th scope="col">ADD NEW USER</th>
-                  <th scope="col">APPROVE ALL USER PROFILES</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                  <th scope="row">SOLVE AND HELP LOGIN REQUEST</th>
-                  <th>REPORT ALL CRASHES - BUGS - ERROS @ USERS</th>
-                  <th>MAIL COMMUNICATION FOR APPROVALS & FIXING ISSUES</th>
-              </tr>
-              <tr>
-                  <th scope="row">DELETE USER</th>
-                  <th scope="col">USER LOGIN AND VERIFICATION AND AUTHENTICATION</th>
-                  <th>CORRESPONDING COMMUNICATION FOR WELCOME APPROVALS @ USERS</th>
-              </tr>
-              </tbody>
-          </table>
-        </div>
-    </div>
-  </div>
-</div>
-</div> */}
+export default SuperAdminUser;

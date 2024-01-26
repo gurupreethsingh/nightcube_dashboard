@@ -1,19 +1,19 @@
 import React from "react";
-import earth_green from "../website_assets/videos/earth_green.mp4";
-import earth_brown from "../website_assets/videos/earth_brown.mp4";
-
+import nightcube_dashbord_background from '../website_assets/videos/nightcube_dashbord_background.mp4';
+import { MdExpandCircleDown } from "react-icons/md";
 import { FaArrowRightToBracket } from "react-icons/fa6";
-import {Link} from 'react-router-dom';
+import { PieChart } from "@mui/x-charts/PieChart";
+import { BarChart } from "@mui/x-charts/BarChart";
 
 const Admin1User = () => {
   return (
     <div className="bgContainer">
       <div className="overlay">
-        <video className="bgVideo" src={earth_green} autoPlay loop muted />
+        <video className="bgVideo" src={nightcube_dashbord_background} autoPlay loop muted />
         <div className="content">
           <div className="parent">
             <div>
-              <h1 className="text-center">ADMIN 1</h1>
+              <h4 className="text-center">ADMIN 1 USER</h4>
             </div>
             <div className="navsection d-flex align-items-center justify-content-start p-3  ">
               <div className="leftside flex-grow-1 ms-3 me-3">
@@ -25,6 +25,7 @@ const Admin1User = () => {
                   aria-controls="offcanvasWithBothOptions"
                 >
                   <FaArrowRightToBracket
+                  
                     style={{ height: "50px", width: "50px", color: "white" }}
                   />
                 </button>
@@ -62,20 +63,24 @@ const Admin1User = () => {
               <div className="righside flex-grow-1 w-100  ">
                 <ul class="nav nav-underline d-flex justify-content-evenly">
                   <li class="nav-item flex-grow-1 text-center">
-                    <Link class="nav-link text-light" to="/admin1user">
+                    <a class="nav-link text-light" href="#">
                       USERS
-                    </Link>
-                  </li>
-
-                  <li class="nav-item flex-grow-1 text-center">
-                  <Link class="nav-link text-light" to="/admin1event">
-                      EVENTS
-                    </Link>
+                    </a>
                   </li>
                   <li class="nav-item flex-grow-1 text-center">
-                  <Link class="nav-link text-light" to="/admin1artist">
+                    <a class="nav-link text-light" href="#">
+                      OUTLETS
+                    </a>
+                  </li>
+                  <li class="nav-item flex-grow-1 text-center">
+                    <a class="nav-link text-light" href="#">
                       ARTISTS
-                    </Link>
+                    </a>
+                  </li>
+                  <li class="nav-item flex-grow-1 text-center">
+                    <a class="nav-link text-light" href="#">
+                      EVENTS
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -83,81 +88,381 @@ const Admin1User = () => {
 
             <div className="mainsection content">
               <div class="container-fluid text-center">
-              <div className="roas_section ps-5 pe-5"  id = "accounts">
-          <div class="row">
-            <h1>ADMIN 1 - USER MODULE</h1>
-                  <div className="transparent-table" >
-                            <table className="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">USER ID</th>
-                                <th scope="col">USER DETAILS</th>
-                                <th scope="col">COMMS</th>
-                                <th scope="col">REGISTRATION DATE/MONTH</th>
-                                
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">SOLVE AND HELP LOGIN REQUEST</th>
-                                <th>REPORT ALL CRASHES - BUGS - ERROS @ USERS</th>
-                                <th>MAIL COMMUNICATION FOR APPROVALS & FIXING ISSUES</th>
-                                <th>REPORT ALL CRASHES - BUGS - ERROS @ USERS</th>
-                            </tr>
-                            <tr>
-                                <th scope="row">DELETE USER</th>
-                                <th scope="col">USER LOGIN AND VERIFICATION AND AUTHENTICATION</th>
-                                <th>CORRESPONDING COMMUNICATION FOR WELCOME APPROVALS @ USERS</th>
-                                <th></th>
-                            </tr>
-                            </tbody>
-                        </table>
+
+              <div class="row">
+                  <div
+                    class="col  d-flex flex-column justify-content-start align-items-center"
+                    style={{ height: "400px", width: "25%" }}
+                  >
+                    <h4 className="text-center">GENDER RATIO</h4>
+                    <div
+                      className="maincircle d-flex justify-content-center align-items-center mx-0"
+                      style={{ height: "100%", width: "100%" }}
+                    >
+                      <div
+                        className="piechart d-flex justify-content-start align-items-center  custom-pie-chart-container"
+                        style={{ width: "100%" }}
+                      >
+                          <PieChart
+                            series={[
+                              {
+                                data: [
+                                  { id: 0, value: 10,  label: "MALE" ,    color : "#00FC7E" },
+                                  { id: 1, value: 15,  label: "FEMALE"  , color  :"#013649"},
+                                ],
+                                highlightScope: { faded: 'global', highlighted: 'item' },
+                                faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                              },
+                            ]}
+                            width={500}
+                            height={250}
+                            margin={{ right: 300 }}
+                          />
+
                       </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col  d-flex flex-column justify-content-start align-items-center "
+                    style={{ height: "400px", width: "25%" }}
+                  >
+                    <h4 className="text-center">AGE GROUP</h4>
+                    <div
+                      className="maincircle d-flex justify-content-center align-items-center mx-0"
+                      style={{ height: "100%", width: "100%" }}
+                    >
+                      <div
+                        className="piechart d-flex justify-content-start align-items-center  custom-pie-chart-container"
+                        style={{ width: "100%" }}
+                      >
+                        <PieChart
+                          series={[
+                            {
+                              data: [
+                                { id: 0, value: 10, label: "16 to 21" , color : "#00FC7E"}, // green
+                                { id: 1, value: 15, label: "21 to 25", color : "#00EBFA" }, // blue
+                                { id: 2, value: 20, label: "26 to 30"  , color : "#FAF700"}, // yellow
+                                { id: 3, value: 10, label: "31 to 35"  , color: "#FFFFFF"}, // white
+                                { id: 4, value: 15, label: "36 to 40" , color: "#FF3600"}, // orange
+                                { id: 5, value: 20, label: "40 +    "  , color  :"#FE0041"}, // red
+                              ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                            },
+                          ]}
+                          width={500}
+                          height={250}
+                          margin={{ right: 300 }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col  d-flex flex-column justify-content-start align-items-center "
+                    style={{ height: "400px", width: "25%" }}
+                  >
+                    <h4 className="text-center">OUTING FREQUENCY</h4>
+                    <div
+                      className="maincircle d-flex justify-content-center align-items-center mx-0"
+                      style={{ height: "100%", width: "100%" }}
+                    >
+                      <div
+                        className="piechart d-flex justify-content-start align-items-center  custom-pie-chart-container"
+                        style={{ width: "100%" }}
+                      >
+                        <PieChart
+                          series={[
+                            {
+                              data: [
+                                { id: 0, value: 10, label: "ONCE A WEEK" ,      color : "#FE0041"},
+                                { id: 1, value: 15, label: "ONCE IN 2 WEEKS" , color : "#FAF700"},
+                                { id: 2, value: 20, label: "ONCE A MONTH" ,    color : "#00FC7E" },
+                              ],
+
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+
+                            },
+                          ]}
+                          width={550}
+                          height={250}
+                          margin={{ right: 300 }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col  d-flex flex-column justify-content-start align-items-center "
+                    style={{ height: "400px", width: "25%" }}
+                  >
+                    <h4 className="text-center">COMMUNICATION</h4>
+                    <div
+                      className="maincircle d-flex justify-content-center align-items-center mx-0"
+                      style={{ height: "100%", width: "100%" }}
+                    >
+                      <div
+                        className="piechart d-flex justify-content-start align-items-center  custom-pie-chart-container"
+                        style={{ width: "100%" }}
+                      >
+                        <PieChart
+                          series={[
+                            {
+                              data: [
+                                { id: 0, value: 10, label: "WHATSAPP" , color : "#00FC7E"}, // green 
+                                { id: 1, value: 15, label: "EMAIL"  , color : "#FAF700"},    // yellow
+                                { id: 2, value: 20, label: "TEXT MESSAGE" , color : "#FE0041" }, // red
+                              ],
+                              highlightScope: { faded: 'global', highlighted: 'item' },
+                              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                            },
+                          ]}
+                          width={500}
+                          height={250}
+                          margin={{ right: 300 }}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="container-fluid text-center">
-              <div className="roas_section ps-5 pe-5"  id = "accounts">
-          <div class="row">
-                  <div className="transparent-table" >
-                            <table className="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">USER ID</th>
-                                <th scope="col">USER DETAILS</th>
-                                <th scope="col">COMMUNICATION</th>
-                                <th scope="col">REGISTRATION DATE/MONTH</th>
-                                <th scope="col">CONTACT</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <th>USERS 1</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
+                <div className="mainsectionend ">
+                  <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed text-right text-light d-block"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#panelsStayOpen-collapseThree"
+                          aria-expanded="true"
+                          aria-controls="panelsStayOpen-collapseThree"
+                        >
+                          {" "}EXPAND DISTRIBUTION &nbsp;
+                          <MdExpandCircleDown />
+                        </button>
+                      </h2>
+                      <div
+                        id="panelsStayOpen-collapseThree"
+                        class="accordion-collapse collapse"
+                      >
+                        <div class="accordion-body">
+                          <div class="row">
+                            <div
+                              class="col d-flex flex-column justify-content-center align-items-center"
+                              style={{ height: "400px" }}
+                            >
+                              <h4 className="text-light">AGE GROUP</h4>
+                              <div
+                                className="maincircle d-flex justify-content-center"
+                                style={{ height: "100%", width: "100%" }}
+                              >
+                                <div className="piechart d-flex align-items-center custom-pie-chart-container">
+                                  <PieChart
+                                    series={[
+                                      {
+                                        data: [
+                                          { id: 0, value: 10 , color : "#00FC7E"},
+                                          { id: 1, value: 15 ,  color : "#00EBFA"},
+                                          { id: 2, value: 20 , color : "#FAF700"},
+                                          { id: 3, value: 10 , color: "#FFFFFF"},
+                                          { id: 4, value: 15 , color: "#FF3600"},
+                                          { id: 5, value: 20 , color  :"#FE0041"},
+                                        ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                                      },
+                                    ]}
+                                    width={200}
+                                    height={300}
+                                  />
+                                </div>
 
-                            <tr>
-                                <th scope="row">2</th>
-                                <th>USERS 2</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
+                                <div className="piecalculations d-flex align-items-center custom-pie-chart-container">
+                                  <BarChart
+                                    xAxis={[
+                                      {
+                                        id: "barCategories",
+                                        data: [
+                                          "16 - 21",
+                                          "21 - 25",
+                                          "26-30",
+                                          "31-35",
+                                          "36-40",
+                                          "40+ ",
+                                        ],
+                                        scaleType: "band",
+                                      },
+                                    ]}
+                                    series={[
+                                      {
+                                        data: [20, 50, 30, 40, 23, 97],
+                                      },
+                                    ]}
+                                    width={380}
+                                    height={300}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
-                            <tr>
-                                <th scope="row">3</th>
-                                <th>USERS 3</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
-                            </tbody>
-                        </table>
+                          <div class="row">
+                            <div
+                              class="col  d-flex flex-column justify-content-center align-items-center custom-pie-chart-container"
+                              style={{ height: "400px" }}
+                            >
+                              <h4 className="text-light">OUTING FREQUENCY</h4>
+                              <div
+                                className="maincircle d-flex justify-content-center"
+                                style={{ height: "100%", width: "100%" }}
+                              >
+                                <div className="piechart d-flex align-items-center custom-pie-chart-container">
+                                  <PieChart
+                                    series={[
+                                      {
+                                        data: [
+                                          { id: 0, value: 10, color : "#FE0041"},
+                                          { id: 1, value: 15,  color : "#FAF700"},
+                                          { id: 2, value: 20, color : "#00FC7E" },
+                                        ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                                      },
+                                    ]}
+                                    width={250}
+                                    height={300}
+                                  />
+                                </div>
+
+                                <div className="piecalculations d-flex align-items-center custom-pie-chart-container">
+                                <BarChart
+                                xAxis={[
+                                  {
+                                    id: "barCategories",
+                                    data: ["ONCE A WEEK", "ONCE 2 WEEKS", "ONCE A MONTH"],
+                                    scaleType: "band",
+                                  },
+                                ]}
+                                series={[
+                                  {
+                                    id: "barSeries",
+                                    data: [40, 23, 97],
+                                  },
+                                ]}
+                                width={440}
+                                height={300}
+                              />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              class="col d-flex flex-column justify-content-center align-items-center custom-pie-chart-container"
+                              style={{ height: "400px" }}
+                            >
+                              <h4 className="text-light">GENDER RATIO</h4>
+                              <div
+                                className="maincircle d-flex justify-content-center"
+                                style={{ height: "100%", width: "100%" }}
+                              >
+                                <div className="piechart d-flex align-items-center">
+                                  <PieChart
+                                    series={[
+                                      {
+                                        data: [
+                                          { id: 0, value: 10,  color : "#00FC7E" },
+                                          { id: 1, value: 15,  color  :"#013649"},
+                                        ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                                      },
+                                    ]}
+                                    width={210}
+                                    height={300}
+                                  />
+                                </div>
+
+                                <div className="piecalculations d-flex align-items-center">
+                                  <BarChart
+                                    xAxis={[
+                                      {
+                                        id: "barCategories",
+                                        data: ["MALE", "FEMALE"],
+                                        scaleType: "band",
+                                      },
+                                    ]}
+                                    series={[
+                                      {
+                                        data: [40, 23],
+                                      },
+                                    ]}
+                                    width={230}
+                                    height={300}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              class="col d-flex flex-column justify-content-center align-items-center custom-pie-chart-container"
+                              style={{ height: "400px" }}
+                            >
+                              <h4 className="text-light">COMMUNICATION</h4>
+                              <div
+                                className="maincircle d-flex justify-content-center"
+                                style={{ height: "100%", width: "100%" }}
+                              >
+                                <div className="piechart d-flex align-items-center">
+                                  <PieChart
+                                    series={[
+                                      {
+                                        data: [
+                                          { id: 0, value: 10, color : "#00FC7E"}, // green 
+                                          { id: 1, value: 15,  color : "#FAF700"},    // yellow
+                                          { id: 2, value: 20,  color : "#FE0041" }, // red
+                                        ],
+                                        highlightScope: { faded: 'global', highlighted: 'item' },
+                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+                                      },
+                                    ]}
+                                    width={250}
+                                    height={300}
+                                  />
+                                </div>
+
+                                <div className="piecalculations d-flex align-items-center custom-pie-chart-container">
+                                  <BarChart
+                                    xAxis={[
+                                      {
+                                        id: "barCategories",
+                                        data: [
+                                          "EMAIL",
+                                          "WHATSAPP",
+                                          "TEXT MESSAGE",
+                                        ],
+                                        scaleType: "band",
+                                      },
+                                    ]}
+                                    series={[
+                                      {
+                                        data: [40, 23, 97],
+                                      },
+                                    ]}
+                                    width={400}
+                                    height={300}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          
+                        </div>
                       </div>
+                    </div>
                   </div>
                 </div>
               </div>

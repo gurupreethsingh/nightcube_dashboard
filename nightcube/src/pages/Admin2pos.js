@@ -83,40 +83,90 @@ const Admin2pos = () => {
 
             <div className="mainsection content">
             <div class="container-fluid text-center">
-              <div className="roas_section ps-5 pe-5"  id = "accounts">
-          <div class="row">
-          <h1>ADMIN 2 - POS MODULE</h1>
-            <div className="transparent-table" >
-                            <table className="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">CUSTOMER ID / PHONE #</th>
-                                <th scope="col">OUTLET ID</th>
-                                <th scope="col">VALIDITY / TRANSACTION ID</th>
+                          <div className="roas_section p-5" id="pos">
+            <div class="row">
+            <h2 className="text-center p-3">
+                POINT OF SALES{" "}
+              </h2>
 
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <th scope="col">TOTAL AMOUNT + GST</th>
-                                <th scope="col">ELIGIBILITY</th>
-                                <th scope="col">COUPON</th>
-
-                            </tr>
-
-                            <tr>
-                            <th scope="col">FINAL AMOUNT</th>
-                                <th scope="col">STATUS</th>
-                                <th scope="col">STATUS</th>
-                            </tr>
-
-                            </tbody>
-                        </table>
-                      </div>
-                  </div>
-                </div>
+              <div className="transparent-table">
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL NO</th>
+                      <th scope="col">CUSOMER NAME</th>
+                      <th scope="col">CUSTOMER PHONE</th>
+                      <th scope="col">OUTLET NAME</th>
+                      <th scope="col">VALIDITY</th>
+                      <th scope="col">GROSS AMOUNT</th>
+                      <th scope="col">ELIGIBILITY</th>
+                      <th scope="col">TOTAL AMOUNT(GST)</th>
+                      <th scope="col">COUPONS</th>
+                      <th scope="col">FINAL AMOUNT</th>
+                      <th scope="col">STATUS</th>
+                      <th scope="col">TRANSACTION ID</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
+                      <td><a className="btn btn-sm btn-warning">EDIT</a></td>
+                      <td><a className="btn btn-sm btn-danger">DELETE</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
+                      <td><a className="btn btn-sm btn-warning">EDIT</a></td>
+                      <td><a className="btn btn-sm btn-danger">DELETE</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry the Bird</td>
+                      <td>@twitter</td>
+                      <td>@fat</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
+                      <td><a className="btn btn-sm btn-warning">EDIT</a></td>
+                      <td><a className="btn btn-sm btn-danger">DELETE</a></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="container-fluid text-center">
+            </div>
+          </div>
+              </div>
+
+
+              {/* <div class="container-fluid text-center">
               <div className="roas_section ps-5 pe-5"  id = "accounts">
           <div class="row">
             <div className="transparent-table" >
@@ -171,7 +221,7 @@ const Admin2pos = () => {
                       </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

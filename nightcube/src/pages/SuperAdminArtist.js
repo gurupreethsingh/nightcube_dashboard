@@ -5,7 +5,7 @@ import { FaArrowRightToBracket } from "react-icons/fa6";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { BarChart } from "@mui/x-charts/BarChart";
 
-const Admin1artist = () => {
+const SuperAdminArtist = () => {
   return (
     <div className="bgContainer">
       <div className="overlay">
@@ -13,7 +13,7 @@ const Admin1artist = () => {
         <div className="content">
           <div className="parent">
             <div>
-              <h4 className="text-center">ADMIN 1 ARTIST</h4>
+              <h4 className="text-center">SUPER ADMIN/ARTIST</h4>
             </div>
             <div className="navsection d-flex align-items-center justify-content-start p-3  ">
               <div className="leftside flex-grow-1 ms-3 me-3">
@@ -271,4 +271,4 @@ const Admin1artist = () => {
   );
 };
 
-export default Admin1artist;
+export default SuperAdminArtist;

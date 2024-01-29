@@ -1,6 +1,5 @@
 import React from "react";
-import earth_green from "../website_assets/videos/earth_green.mp4";
-import earth_brown from "../website_assets/videos/earth_brown.mp4";
+import nightcube_dashbord_background from '../website_assets/videos/nightcube_dashbord_background.mp4';
 
 import { FaArrowRightToBracket } from "react-icons/fa6";
 import {Link} from 'react-router-dom';
@@ -9,11 +8,11 @@ const Admin2pos = () => {
   return (
     <div className="bgContainer">
       <div className="overlay">
-        <video className="bgVideo" src={earth_green} autoPlay loop muted />
+        <video className="bgVideo" src={nightcube_dashbord_background} autoPlay loop muted />
         <div className="content">
           <div className="parent">
             <div>
-              <h1 className="text-center">ADMIN 2</h1>
+              <h1 className="text-center">ADMIN 2 POS</h1>
             </div>
             <div className="navsection d-flex align-items-center justify-content-start p-3  ">
               <div className="leftside flex-grow-1 ms-3 me-3">
@@ -164,64 +163,6 @@ const Admin2pos = () => {
             </div>
           </div>
               </div>
-
-
-              {/* <div class="container-fluid text-center">
-              <div className="roas_section ps-5 pe-5"  id = "accounts">
-          <div class="row">
-            <div className="transparent-table" >
-                            <table className="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">CUSTOMER ID / PHONE #</th>
-                                <th scope="col">OUTLET ID</th>
-                                <th scope="col">VALIDITY / TRANSACTION ID</th>
-                                <th scope="col">TOTAL AMOUNT + GST</th>
-                                <th scope="col">ELIGIBILITY</th>
-                                <th scope="col">COUPON</th>
-                                <th scope="col">FINAL AMOUNT</th>
-                                <th scope="col">STATUS</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <th>USERS 1</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">2</th>
-                                <th>USERS 2</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">3</th>
-                                <th>USERS 3</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                                <th>Whatsapp</th>
-                                <th>12 dec</th>
-                                <th>+91 987654321</th>
-                            </tr>
-                            </tbody>
-                        </table>
-                      </div>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

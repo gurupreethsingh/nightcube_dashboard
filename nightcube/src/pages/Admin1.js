@@ -475,40 +475,23 @@ const Admin1 = () => {
                     <tr>
                       <th scope="col">MY PROFILE</th>
                       <th scope="col">OVER VIEW</th>
-                      <th scope="col">MANAGE ADMINS</th>
-                      <th scope="col">MANAGE PARTNERS</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td scope="row">CHANGE EMAIL</td>
                       <td>ARTIST</td>
-                      <td>ADMIN 1</td>
-                      <td>EVENT PARTNERS</td>
+
                     </tr>
                     <tr>
                       <td scope="row">CHANGE PASSWORD</td>
                       <td>EVENT</td>
-                      <td>ADMIN 2</td>
-                      <td>ARTIST PARTNERS</td>
+
                     </tr>
                     <tr>
-                    <td scope="row">SOCIAL HANDLES</td>
+                    <td scope="row">LOGOUT</td>
                       <td>USER</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td scope="row">LOGOUT</td>
-                      <td>IMAGES</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"></th>
-                      <td>VIDEOS</td>
-                      <td></td>
-                      <td></td>
+
                     </tr>
                   </tbody>
                 </table>
